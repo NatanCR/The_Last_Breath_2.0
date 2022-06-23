@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4EDC2AD92864BC9A003EF7F5 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC2AD82864BC9A003EF7F5 /* main.swift */; };
+		4EDC2AE02864BD65003EF7F5 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC2ADF2864BD65003EF7F5 /* Menu.swift */; };
+		4EDC2AE22864BD8C003EF7F5 /* InicioJogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC2AE12864BD8C003EF7F5 /* InicioJogo.swift */; };
+		4EDC2AE42864BDBE003EF7F5 /* Capitulo1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC2AE32864BDBE003EF7F5 /* Capitulo1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,9 @@
 /* Begin PBXFileReference section */
 		4EDC2AD52864BC9A003EF7F5 /* TheLastBreath2.0 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TheLastBreath2.0; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EDC2AD82864BC9A003EF7F5 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		4EDC2ADF2864BD65003EF7F5 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		4EDC2AE12864BD8C003EF7F5 /* InicioJogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioJogo.swift; sourceTree = "<group>"; };
+		4EDC2AE32864BDBE003EF7F5 /* Capitulo1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capitulo1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,9 @@
 			isa = PBXGroup;
 			children = (
 				4EDC2AD82864BC9A003EF7F5 /* main.swift */,
+				4EDC2ADF2864BD65003EF7F5 /* Menu.swift */,
+				4EDC2AE12864BD8C003EF7F5 /* InicioJogo.swift */,
+				4EDC2AE32864BDBE003EF7F5 /* Capitulo1.swift */,
 			);
 			path = TheLastBreath2.0;
 			sourceTree = "<group>";
@@ -120,6 +129,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EDC2AE42864BDBE003EF7F5 /* Capitulo1.swift in Sources */,
+				4EDC2AE02864BD65003EF7F5 /* Menu.swift in Sources */,
+				4EDC2AE22864BD8C003EF7F5 /* InicioJogo.swift in Sources */,
 				4EDC2AD92864BC9A003EF7F5 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
