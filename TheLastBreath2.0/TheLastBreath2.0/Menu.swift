@@ -1,21 +1,20 @@
 //
-//  main.swift
-//  TheLastBreath2.0
+//  Menu.swift
+//  NanoChallenge6
 //
-//  Created by Natan Rodrigues on 23/06/22.
+//  Created by Natan Rodrigues on 21/06/22.
 //
 
 import Foundation
 
-class Menu{
+public class Menu{
     
-    let inicioJogo = InicioJogo()
-    
-    func menuJogo(){
+    public func menuJogo(){
+        var inicioJogo = InicioJogo()
         let espaco = "                              "
         var escolhaMenu: String = ""
         printaEscrita("\n\n\n\n\n\n\n\n\n")
-        printaEscrita2("\n\n" +
+        print("\n\n" +
               "\n\(espaco)█████████████████████████████████████████████████████████████████████████████████████████████████████████████" +
               "\n\(espaco)█░░░░░░░░░░░░░░█░░░░░░██░░░░░░█░░░░░░░░░░░░░░████░░░░░░█████████░░░░░░░░░░░░░░█░░░░░░░░░░░░░░█░░░░░░░░░░░░░░█" +
               "\n\(espaco)█░░▄▀▄▀▄▀▄▀▄▀░░█░░▄▀░░██░░▄▀░░█░░▄▀▄▀▄▀▄▀▄▀░░████░░▄▀░░█████████░░▄▀▄▀▄▀▄▀▄▀░░█░░▄▀▄▀▄▀▄▀▄▀░░█░░▄▀▄▀▄▀▄▀▄▀░░█" +
@@ -96,6 +95,8 @@ class Menu{
         }
         print("")
     }
+    
+    init() { }
 }
 
 struct Personagem {

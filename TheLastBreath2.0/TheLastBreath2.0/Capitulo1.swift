@@ -1,21 +1,18 @@
 //
-//  main.swift
-//  TheLastBreath2.0
+//  Capitulo1.swift
+//  NanoChallenge6
 //
-//  Created by Natan Rodrigues on 23/06/22.
+//  Created by Natan Rodrigues on 22/06/22.
 //
 
 import Foundation
 
-class Capitulo1 {
+public class Capitulo1 {
     
-    let inicioJogo = InicioJogo()
-    
-    func capitulo1() {
+    public func capitulo1() {
         print("CAPÍTULO I - A terrível maldição")
         
     }
-  
     
     private func printaEscrita(_ text: String) {
         let arr = Array.init(text)
@@ -26,4 +23,6 @@ class Capitulo1 {
         }
         print("")
     }
+    
+    init() { }
 }
