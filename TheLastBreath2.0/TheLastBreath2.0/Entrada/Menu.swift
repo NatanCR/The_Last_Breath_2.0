@@ -10,10 +10,10 @@ import Foundation
 public class Menu{
     
     public func menuJogo(){
-        var inicioJogo = InicioJogo()
+        let inicioJogo = InicioJogo()
         let espaco = "                              "
         var escolhaMenu: String = ""
-        printaEscrita("\n\n\n\n\n\n\n\n\n")
+        print("\n\n\n\n\n\n\n\n\n")
         print("\n\n" +
               "\n\(espaco)█████████████████████████████████████████████████████████████████████████████████████████████████████████████" +
               "\n\(espaco)█░░░░░░░░░░░░░░█░░░░░░██░░░░░░█░░░░░░░░░░░░░░████░░░░░░█████████░░░░░░░░░░░░░░█░░░░░░░░░░░░░░█░░░░░░░░░░░░░░█" +
@@ -41,7 +41,7 @@ public class Menu{
               "\n\(espaco)█░░▄▀▄▀▄▀▄▀▄▀▄▀░░█░░▄▀░░██░░▄▀▄▀▄▀░░█░░▄▀▄▀▄▀▄▀▄▀░░█░░▄▀░░██░░▄▀░░█████░░▄▀░░█████░░▄▀░░██░░▄▀░░█" +
               "\n\(espaco)█░░░░░░░░░░░░░░░░█░░░░░░██░░░░░░░░░░█░░░░░░░░░░░░░░█░░░░░░██░░░░░░█████░░░░░░█████░░░░░░██░░░░░░█" +
               "\n\(espaco)█████████████████████████████████████████████████████████████████████████████████████████████████")
-        printaEscrita("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+        print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
         
         repeat {
             
@@ -66,9 +66,9 @@ public class Menu{
         } while escolhaMenu != "5"
     }
     
-    func mostraPersonagens() -> [Personagem] {
+   private func mostraPersonagens() -> [PersonagensJogo] {
         print("\nNão se apegue a eles, podem acabar não sobrevivendo até o final do jogo...")
-        let personagensJogo = Personagem(nome: ["Mestre dos Magos", "Centrion", "Grannus", "Solveig", "Bryana", "Doodou", "Player"], descricao: ["Mago supremo do universo.", "Mago irmão do Mestre dos Magos, que foi corrompido pela fome de poder ao longo dos anos.", "Mago aprendiz do Mestre dos Magos.", "Filho mais velho do Mestre dos Magos e futuro feiticeiro.", "Irmã mais nova de Solveig.", "Duende verde amigo do Mestre dos Magos que o acompanhou durante longos anos de jornada.", "Filho adotivo que foi perdido pelos pais durante uma destruição causada na sua cidade por dois magos."])
+        let personagensJogo = PersonagensJogo(nome: ["Mestre dos Magos", "Centrion", "Grannus", "Solveig", "Bryana", "Doodou", "Player"], descricao: ["Mago supremo do universo.", "Mago irmão do Mestre dos Magos, que foi corrompido pela fome de poder ao longo dos anos.", "Mago aprendiz do Mestre dos Magos.", "Filho mais velho do Mestre dos Magos e futuro feiticeiro.", "Irmã mais nova de Solveig.", "Duende verde amigo do Mestre dos Magos que o acompanhou durante longos anos de jornada.", "Filho adotivo que foi perdido pelos pais durante uma destruição causada na sua cidade por dois magos."])
         
         for i in 0..<personagensJogo.nome.count {
             print("\nNome: \(personagensJogo.nome[i])\nDescrição: \(personagensJogo.descricao[i])")
@@ -76,30 +76,10 @@ public class Menu{
         return [personagensJogo]
     }
     
-    private func printaEscrita(_ text: String) {
-        let arr = Array.init(text)
-        
-        for i in arr {
-            usleep(100001)
-            print(i, terminator: "")
-        }
-        print("")
-    }
-    
-    private func printaEscrita2(_ text: String) {
-        let arr = Array.init(text)
-        
-        for i in arr {
-            usleep(4000)
-            print(i, terminator: "")
-        }
-        print("")
-    }
-    
     init() { }
 }
 
-struct Personagem {
+struct PersonagensJogo {
     var nome: [String]
     var descricao: [String]
 }

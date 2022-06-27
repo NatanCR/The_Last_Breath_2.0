@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E49D473286531A700B11FAC /* Capitulo2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E49D472286531A700B11FAC /* Capitulo2.swift */; };
+		4E49D4782865321A00B11FAC /* InicioJornada.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E49D4772865321A00B11FAC /* InicioJornada.swift */; };
+		4E49D47A2865322500B11FAC /* FinalJornada.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E49D4792865322500B11FAC /* FinalJornada.swift */; };
+		4E49D4812865499800B11FAC /* Combate01.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E49D4802865499800B11FAC /* Combate01.swift */; };
+		4E49D48328654B8500B11FAC /* Personagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E49D48228654B8500B11FAC /* Personagem.swift */; };
+		4E49D48528660BA800B11FAC /* MestreMago.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E49D48428660BA800B11FAC /* MestreMago.swift */; };
+		4E49D487286630B900B11FAC /* Centrion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E49D486286630B900B11FAC /* Centrion.swift */; };
+		4E49D4892866316100B11FAC /* Inventario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E49D4882866316100B11FAC /* Inventario.swift */; };
+		4E49D48B2869FCD800B11FAC /* Console.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E49D48A2869FCD800B11FAC /* Console.swift */; };
 		4EDC2AD92864BC9A003EF7F5 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC2AD82864BC9A003EF7F5 /* main.swift */; };
 		4EDC2AE02864BD65003EF7F5 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC2ADF2864BD65003EF7F5 /* Menu.swift */; };
 		4EDC2AE22864BD8C003EF7F5 /* InicioJogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC2AE12864BD8C003EF7F5 /* InicioJogo.swift */; };
@@ -26,6 +35,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4E49D472286531A700B11FAC /* Capitulo2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capitulo2.swift; sourceTree = "<group>"; };
+		4E49D4772865321A00B11FAC /* InicioJornada.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioJornada.swift; sourceTree = "<group>"; };
+		4E49D4792865322500B11FAC /* FinalJornada.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalJornada.swift; sourceTree = "<group>"; };
+		4E49D4802865499800B11FAC /* Combate01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Combate01.swift; sourceTree = "<group>"; };
+		4E49D48228654B8500B11FAC /* Personagem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Personagem.swift; sourceTree = "<group>"; };
+		4E49D48428660BA800B11FAC /* MestreMago.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MestreMago.swift; sourceTree = "<group>"; };
+		4E49D486286630B900B11FAC /* Centrion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Centrion.swift; sourceTree = "<group>"; };
+		4E49D4882866316100B11FAC /* Inventario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inventario.swift; sourceTree = "<group>"; };
+		4E49D48A2869FCD800B11FAC /* Console.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Console.swift; sourceTree = "<group>"; };
 		4EDC2AD52864BC9A003EF7F5 /* TheLastBreath2.0 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TheLastBreath2.0; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EDC2AD82864BC9A003EF7F5 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		4EDC2ADF2864BD65003EF7F5 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
@@ -44,6 +62,74 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E49D474286531C900B11FAC /* Capitulos */ = {
+			isa = PBXGroup;
+			children = (
+				4EDC2AE32864BDBE003EF7F5 /* Capitulo1.swift */,
+				4E49D472286531A700B11FAC /* Capitulo2.swift */,
+			);
+			path = Capitulos;
+			sourceTree = "<group>";
+		};
+		4E49D475286531DC00B11FAC /* Entrada */ = {
+			isa = PBXGroup;
+			children = (
+				4EDC2ADF2864BD65003EF7F5 /* Menu.swift */,
+				4EDC2AE12864BD8C003EF7F5 /* InicioJogo.swift */,
+			);
+			path = Entrada;
+			sourceTree = "<group>";
+		};
+		4E49D476286531F000B11FAC /* Jornada */ = {
+			isa = PBXGroup;
+			children = (
+				4E49D4772865321A00B11FAC /* InicioJornada.swift */,
+				4E49D4792865322500B11FAC /* FinalJornada.swift */,
+			);
+			path = Jornada;
+			sourceTree = "<group>";
+		};
+		4E49D47B2865325300B11FAC /* Final1 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Final1;
+			sourceTree = "<group>";
+		};
+		4E49D47C2865325C00B11FAC /* Final2 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Final2;
+			sourceTree = "<group>";
+		};
+		4E49D47D2865326200B11FAC /* Final3 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Final3;
+			sourceTree = "<group>";
+		};
+		4E49D47E2865327800B11FAC /* Objetos */ = {
+			isa = PBXGroup;
+			children = (
+				4E49D48228654B8500B11FAC /* Personagem.swift */,
+				4E49D48428660BA800B11FAC /* MestreMago.swift */,
+				4E49D486286630B900B11FAC /* Centrion.swift */,
+				4E49D4882866316100B11FAC /* Inventario.swift */,
+				4E49D48A2869FCD800B11FAC /* Console.swift */,
+			);
+			path = Objetos;
+			sourceTree = "<group>";
+		};
+		4E49D47F2865496D00B11FAC /* Combates */ = {
+			isa = PBXGroup;
+			children = (
+				4E49D4802865499800B11FAC /* Combate01.swift */,
+			);
+			path = Combates;
+			sourceTree = "<group>";
+		};
 		4EDC2ACC2864BC9A003EF7F5 = {
 			isa = PBXGroup;
 			children = (
@@ -64,9 +150,14 @@
 			isa = PBXGroup;
 			children = (
 				4EDC2AD82864BC9A003EF7F5 /* main.swift */,
-				4EDC2ADF2864BD65003EF7F5 /* Menu.swift */,
-				4EDC2AE12864BD8C003EF7F5 /* InicioJogo.swift */,
-				4EDC2AE32864BDBE003EF7F5 /* Capitulo1.swift */,
+				4E49D47E2865327800B11FAC /* Objetos */,
+				4E49D47F2865496D00B11FAC /* Combates */,
+				4E49D47D2865326200B11FAC /* Final3 */,
+				4E49D47C2865325C00B11FAC /* Final2 */,
+				4E49D47B2865325300B11FAC /* Final1 */,
+				4E49D475286531DC00B11FAC /* Entrada */,
+				4E49D474286531C900B11FAC /* Capitulos */,
+				4E49D476286531F000B11FAC /* Jornada */,
 			);
 			path = TheLastBreath2.0;
 			sourceTree = "<group>";
@@ -129,10 +220,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E49D473286531A700B11FAC /* Capitulo2.swift in Sources */,
+				4E49D48328654B8500B11FAC /* Personagem.swift in Sources */,
+				4E49D487286630B900B11FAC /* Centrion.swift in Sources */,
 				4EDC2AE42864BDBE003EF7F5 /* Capitulo1.swift in Sources */,
 				4EDC2AE02864BD65003EF7F5 /* Menu.swift in Sources */,
 				4EDC2AE22864BD8C003EF7F5 /* InicioJogo.swift in Sources */,
+				4E49D48B2869FCD800B11FAC /* Console.swift in Sources */,
+				4E49D4782865321A00B11FAC /* InicioJornada.swift in Sources */,
+				4E49D47A2865322500B11FAC /* FinalJornada.swift in Sources */,
+				4E49D4812865499800B11FAC /* Combate01.swift in Sources */,
 				4EDC2AD92864BC9A003EF7F5 /* main.swift in Sources */,
+				4E49D4892866316100B11FAC /* Inventario.swift in Sources */,
+				4E49D48528660BA800B11FAC /* MestreMago.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
