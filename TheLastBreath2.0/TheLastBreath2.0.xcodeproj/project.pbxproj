@@ -16,6 +16,10 @@
 		4E49D487286630B900B11FAC /* Centrion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E49D486286630B900B11FAC /* Centrion.swift */; };
 		4E49D4892866316100B11FAC /* Inventario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E49D4882866316100B11FAC /* Inventario.swift */; };
 		4E49D48B2869FCD800B11FAC /* Console.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E49D48A2869FCD800B11FAC /* Console.swift */; };
+		4E49D48D286B883C00B11FAC /* Combate02.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E49D48C286B883C00B11FAC /* Combate02.swift */; };
+		4E49D48F286B8D8600B11FAC /* Hipogrifo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E49D48E286B8D8600B11FAC /* Hipogrifo.swift */; };
+		4E49D493286E5B1400B11FAC /* BatalhaFinal2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E49D492286E5B1400B11FAC /* BatalhaFinal2.swift */; };
+		4E49D495286E5B2B00B11FAC /* BatalhaFinal1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E49D494286E5B2B00B11FAC /* BatalhaFinal1.swift */; };
 		4EDC2AD92864BC9A003EF7F5 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC2AD82864BC9A003EF7F5 /* main.swift */; };
 		4EDC2AE02864BD65003EF7F5 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC2ADF2864BD65003EF7F5 /* Menu.swift */; };
 		4EDC2AE22864BD8C003EF7F5 /* InicioJogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC2AE12864BD8C003EF7F5 /* InicioJogo.swift */; };
@@ -44,6 +48,10 @@
 		4E49D486286630B900B11FAC /* Centrion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Centrion.swift; sourceTree = "<group>"; };
 		4E49D4882866316100B11FAC /* Inventario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inventario.swift; sourceTree = "<group>"; };
 		4E49D48A2869FCD800B11FAC /* Console.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Console.swift; sourceTree = "<group>"; };
+		4E49D48C286B883C00B11FAC /* Combate02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Combate02.swift; sourceTree = "<group>"; };
+		4E49D48E286B8D8600B11FAC /* Hipogrifo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hipogrifo.swift; sourceTree = "<group>"; };
+		4E49D492286E5B1400B11FAC /* BatalhaFinal2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatalhaFinal2.swift; sourceTree = "<group>"; };
+		4E49D494286E5B2B00B11FAC /* BatalhaFinal1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatalhaFinal1.swift; sourceTree = "<group>"; };
 		4EDC2AD52864BC9A003EF7F5 /* TheLastBreath2.0 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TheLastBreath2.0; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EDC2AD82864BC9A003EF7F5 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		4EDC2ADF2864BD65003EF7F5 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
@@ -92,6 +100,7 @@
 		4E49D47B2865325300B11FAC /* Final1 */ = {
 			isa = PBXGroup;
 			children = (
+				4E49D494286E5B2B00B11FAC /* BatalhaFinal1.swift */,
 			);
 			path = Final1;
 			sourceTree = "<group>";
@@ -99,15 +108,9 @@
 		4E49D47C2865325C00B11FAC /* Final2 */ = {
 			isa = PBXGroup;
 			children = (
+				4E49D492286E5B1400B11FAC /* BatalhaFinal2.swift */,
 			);
 			path = Final2;
-			sourceTree = "<group>";
-		};
-		4E49D47D2865326200B11FAC /* Final3 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Final3;
 			sourceTree = "<group>";
 		};
 		4E49D47E2865327800B11FAC /* Objetos */ = {
@@ -118,6 +121,7 @@
 				4E49D486286630B900B11FAC /* Centrion.swift */,
 				4E49D4882866316100B11FAC /* Inventario.swift */,
 				4E49D48A2869FCD800B11FAC /* Console.swift */,
+				4E49D48E286B8D8600B11FAC /* Hipogrifo.swift */,
 			);
 			path = Objetos;
 			sourceTree = "<group>";
@@ -126,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				4E49D4802865499800B11FAC /* Combate01.swift */,
+				4E49D48C286B883C00B11FAC /* Combate02.swift */,
 			);
 			path = Combates;
 			sourceTree = "<group>";
@@ -152,7 +157,6 @@
 				4EDC2AD82864BC9A003EF7F5 /* main.swift */,
 				4E49D47E2865327800B11FAC /* Objetos */,
 				4E49D47F2865496D00B11FAC /* Combates */,
-				4E49D47D2865326200B11FAC /* Final3 */,
 				4E49D47C2865325C00B11FAC /* Final2 */,
 				4E49D47B2865325300B11FAC /* Final1 */,
 				4E49D475286531DC00B11FAC /* Entrada */,
@@ -222,17 +226,21 @@
 			files = (
 				4E49D473286531A700B11FAC /* Capitulo2.swift in Sources */,
 				4E49D48328654B8500B11FAC /* Personagem.swift in Sources */,
+				4E49D48F286B8D8600B11FAC /* Hipogrifo.swift in Sources */,
 				4E49D487286630B900B11FAC /* Centrion.swift in Sources */,
 				4EDC2AE42864BDBE003EF7F5 /* Capitulo1.swift in Sources */,
 				4EDC2AE02864BD65003EF7F5 /* Menu.swift in Sources */,
 				4EDC2AE22864BD8C003EF7F5 /* InicioJogo.swift in Sources */,
+				4E49D493286E5B1400B11FAC /* BatalhaFinal2.swift in Sources */,
 				4E49D48B2869FCD800B11FAC /* Console.swift in Sources */,
 				4E49D4782865321A00B11FAC /* InicioJornada.swift in Sources */,
 				4E49D47A2865322500B11FAC /* FinalJornada.swift in Sources */,
 				4E49D4812865499800B11FAC /* Combate01.swift in Sources */,
 				4EDC2AD92864BC9A003EF7F5 /* main.swift in Sources */,
+				4E49D48D286B883C00B11FAC /* Combate02.swift in Sources */,
 				4E49D4892866316100B11FAC /* Inventario.swift in Sources */,
 				4E49D48528660BA800B11FAC /* MestreMago.swift in Sources */,
+				4E49D495286E5B2B00B11FAC /* BatalhaFinal1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

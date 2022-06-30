@@ -7,12 +7,40 @@
 
 import Foundation
 
-struct Inventario {
+public struct Inventario {
     var tituloObjeto: String
+    var descricaoObjeto: String
     var quantidade: Int
     
-    init(tituloObjeto: String, quantidade: Int) {
+    init(_ tituloObjeto: String,_ descricaoObjeto: String,_ quantidade: Int) {
         self.tituloObjeto = tituloObjeto
+        self.descricaoObjeto = descricaoObjeto
         self.quantidade = quantidade
+    }
+}
+
+public struct FuncoesInventario {
+    var meuInventario: [Inventario] = []
+    
+    public mutating func salvarInventario(tituloObjeto: String, descricaoObjeto: String, quantidade: Int) {
+        meuInventario.append(Inventario.init(tituloObjeto, descricaoObjeto, quantidade))
+    }
+    
+    public func mostrarInventario(vetor: [Inventario]) -> [Inventario] {
+        print("\n<<< INVENTÁRIO >>>")
+        //        for (index, value) in meuInventario.enumerated() {
+        //            print("Item \(index + 1): \(value)")
+        //        }
+        for i in meuInventario {
+            print("\nNome: \(i.tituloObjeto)\nDescrição: \(i.descricaoObjeto)\nQuantidade: \(i.quantidade)")
+            print("|------------------------------------------------------------------------|")
+        }
+        return vetor
+    }
+    
+    public mutating func adicionarObjetos() {
+        meuInventario.append(Inventario.init("Espada do Dragão", "Espada forjada com pele de dragão", 1))
+        meuInventario.append(Inventario.init("Feitiço Retardatário", "Feitiço criado pelo Doodou para atrasar os movimentos do inimigo", 2))
+        meuInventario.append(Inventario.init("Mapa", "Mapa do reino", 1))
     }
 }

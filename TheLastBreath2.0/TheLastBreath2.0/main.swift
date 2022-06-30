@@ -9,12 +9,17 @@ import Foundation
 
 let menu = Menu()
 var pronto: String
+var nomeJogador: String
+var jogador: Personagem
 
 repeat {
     print("\nVocê está pronto para conhecer o incrível mundo de The Last Breath?")
     print("\n[1] - Com certeza!  \n[2] - Não estou preparado...")
     pronto = readLine()!
     if pronto == "1" {
+        print("Diga-me seu nome...")
+        nomeJogador = readLine()!
+        jogador = Personagem(nome: nomeJogador, vida: 100, inventario: FuncoesInventario.init(meuInventario: []))
         print("\nPerfeito, fique sabendo que é um caminho sem volta!")
         menu.menuJogo()
     }else if pronto == "2" {
@@ -22,17 +27,5 @@ repeat {
     } else {
         print("Escolha uma opção válida!")
     }
-
-} while pronto != "1"
-
-
-
-private func printAsWritten(_ text: String) {
-    let arr = Array.init(text)
     
-    for i in arr {
-        usleep(100001)
-        print(i, terminator: "")
-    }
-    print("")
-}
+} while pronto != "1"

@@ -54,7 +54,7 @@ public class Menu{
             case "2":
                 print("\nO jogo é um modelo RPG textual e você terá decisões a tomar durante o decorrer da história, mas preste atenção pois dependendo da sua escolha o jogo pode ter um final diferente do outro. Escolha com sabedoria e bom jogo!")
             case "3":
-                print("\nEste jogo foi desenvolvido e produzido por Natan Camargo Rodrigues.")
+                creditos()
             case "4":
                 mostraPersonagens()
             case "5":
@@ -68,12 +68,17 @@ public class Menu{
     
    private func mostraPersonagens() -> [PersonagensJogo] {
         print("\nNão se apegue a eles, podem acabar não sobrevivendo até o final do jogo...")
+       
         let personagensJogo = PersonagensJogo(nome: ["Mestre dos Magos", "Centrion", "Grannus", "Solveig", "Bryana", "Doodou", "Player"], descricao: ["Mago supremo do universo.", "Mago irmão do Mestre dos Magos, que foi corrompido pela fome de poder ao longo dos anos.", "Mago aprendiz do Mestre dos Magos.", "Filho mais velho do Mestre dos Magos e futuro feiticeiro.", "Irmã mais nova de Solveig.", "Duende verde amigo do Mestre dos Magos que o acompanhou durante longos anos de jornada.", "Filho adotivo que foi perdido pelos pais durante uma destruição causada na sua cidade por dois magos."])
         
         for i in 0..<personagensJogo.nome.count {
             print("\nNome: \(personagensJogo.nome[i])\nDescrição: \(personagensJogo.descricao[i])")
         }
         return [personagensJogo]
+    }
+    
+    public func creditos() {
+        print("\nEste jogo foi desenvolvido e produzido por Natan Camargo Rodrigues.")
     }
     
     init() { }

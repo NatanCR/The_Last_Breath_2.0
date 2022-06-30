@@ -11,6 +11,9 @@ public class Capitulo1 {
     
     public func capitulo1() {
         print("""
+
+
+
 CAPÍTULO I - A terrível maldição
 
 Um homem conhecido como Mestre dos Magos e seu aprendiz Grannus viajam à procura de suprimentos para fabricação de novas poções. Durante essa jornada, ao chegar em uma vila vizinha chamada Aghoo, encontram Centrion, o irmão mais novo do Mestre dos Magos, que foi corrompido por sua fome de poder e conhecimento ao longo dos anos.
@@ -34,6 +37,8 @@ Grannus reúne todos os cidadãos da cidade que estavam perto do local onde os d
 - Mestre dos magos: O que você pretende fazer com tudo isso?
 
 - Centrion: Eu quero tirar de você o que me pertence!! Seus poderes nunca foram seus!!
+
+
 """)
         print("[1] - Descobrir o que Centrion quis dizer \n[2] - Continuar história.")
         let centrion: String = readLine()!
@@ -43,6 +48,7 @@ Grannus reúne todos os cidadãos da cidade que estavam perto do local onde os d
         }
         
         print("""
+
 - Mestre dos magos: Centrion você não é páreo para mim!
 
 - Mestre dos magos: Você sabe quem sou e sabe dos meus poderes, mesmo sendo meu irmão não vou permitir que machuque ninguém!
@@ -50,13 +56,15 @@ Grannus reúne todos os cidadãos da cidade que estavam perto do local onde os d
 Então, uma batalha intensa é travada entre os dois magos poderosos! Uma hora de batalha se passou e muitos danos foram causados no centro de Aghoo e no meio dos destroços uma criança sozinha e indefesa é vista tentando se esconder… O Aprendiz volta para tentar ajudar seu mestre.
 
 - Mestre dos magos: GRANNUS leve essa criança daqui!! Eu vou terminar essa luta sozinho! CENTRIONNNNN!!!! Eu devia ter acabado com você no passado, mas não tem problema eu acabo com você agora!!!
+
 """)
-        print("\nCOMBATE")
+        print("\n...::: COMBATE :::...")
         let combate01 = Combate01()
         
         combate01.combate01()
         
         print("""
+
 - Centrion: Você venceu aqui meu irmão, mas essa batalha ainda não acabou!!
 
 Então em seu último suspiro de vida, Centrion usou o que lhe restava de magia para lançar um feitiço sobre Grannus, o aprendiz do Mestre dos magos, fazendo com que ele seguisse todas as vontades de Centrion.”
@@ -87,32 +95,49 @@ Consumido pelo ódio lançado no feitiço de Centrion, antes de partir e Grannus
 
 Após a morte de seu pai, o Mestre dos Magos, Solveig o filho mais velho leva seus irmãos para uma Vila que haviam visitado uma vez quando crianças onde seria seguro e que eles pudessem viver. Enquanto isso, Grannus celebrava seus novos poderes construindo seu reino sombrio em uma terra distante.
 
-- Solveig: preciso lhe ensinar os conhecimentos que nosso pai tinha, para que um dia você possa se defender sozinho, você entende isso?
+""")
+        var escolha: String
+        let capitulo2 = Capitulo2()
+        
+        repeat {
+            print("""
+
+- Solveig: \(nomeJogador) preciso lhe ensinar os conhecimentos que nosso pai tinha, para que um dia você possa se defender sozinho, você entende isso?
 
 [1] Aprender os conhecimentos
-
-- + nome_aventureiro
-+ : Eu quero proteger nossa vila do homem que matou nosso Pai!! Mas não sei se conseguirei ser bom como você meu irmão
-
-- Solveig: Você será excelente + nome_aventureiro
-+, agora chame nossa irmã para que eu possa ensiná-los a como batalhar!
-
-- + nome_aventureiro + ": BRYANNAAAAAAA, ONDE ESTÁ VOCÊ?
-
-- Bryana: Estou aqui, já estou indo!
-
 [2] Ignorar Solveig
 
-- + nome_aventureiro: …
+""")
+            escolha = readLine()!
+            
+            switch escolha {
+            case "1":
+                print("""
 
-→ repetir pergunta até aceitar.
+- \(nomeJogador): Eu quero proteger nossa vila do homem que matou nosso Pai!! Mas não sei se conseguirei ser bom como você meu irmão.
+
+- Solveig: Você será excelente \(nomeJogador), agora chame nossa irmã para que eu possa ensiná-los a como batalhar!
+
+- \(nomeJogador): BRYANNAAAAAAA, ONDE ESTÁ VOCÊ?
+
+- Bryana: Estou aqui, já estou indo!!
 
 Durante sua juventude Solveig ensina seus irmãos mais novos a desenvolver habilidades e conhecimentos para que um dia eles pudessem juntos derrotar Grannus e livrar Bryana de sua maldição.
+
 """)
+                capitulo2.capitulo2()
+            case "2":
+                print("\n- \(nomeJogador): ... ('cri-cri')\n")
+            default:
+                print("Escolha uma opção válida!")
+            }
+        } while escolha != "1"
+        
     }
     
     private func historiaCentrion() {
         print("""
+
 Há muitos anos atrás, quando Centrion e seu irmão ainda eram jovens eles tinham um único sonho, tornar o mundo mágico em um lugar de paz onde nenhuma criatura seja ela mágica ou não pudesse viver em paz. Mas para isso eles sabiam que seria necessário por fim a prática da magia obscura, e para isso os dois irmãos teriam que aprender tudo sobre magia até mesmo sobre essa magia obscura e perigosa, famosa por corromper aqueles que com ela brincam ou tentam dominar.
 
 Então um dia quando o homem que é hoje conhecido por Mestre dos Magos encontrou um livro muito antigo sobre magia escondido nas ruínas de um castelo longe de casa, nesse livro havia diversos feitiços e magias poderosas e ele acreditava que com esse livro seu irmão e ele poderiam mudar seu mundo.
@@ -142,6 +167,8 @@ Mas tem um preço, essa magia oculta do livro pode corromper e destruir a mente 
 - Mestre dos magos: Irmão, eu sei que fizemos uma promessa mas não precisamos colocar nossas vidas em risco por isso! Não dessa forma!
 
 Depois de uma conversa sem fim, Centrion deixa de lado os conselhos do irmão e decide realizar o feitiço que permitiria receber os poderes ocultos do livro para conseguir dominar a magia obscura do mundo. Mas o que ele não acreditava era que os avisos que o livro dava era tão fortes quanto a verdade que neles existiam, depois de receber esses poderes Centrion havia mudado, se tornou egoísta e faminto por mais poder deixou seu irmão sozinho em busca de algo que ele jamais conseguiria, pois seus destinos já estavam traçados.
+
+
 """)
         
     }
