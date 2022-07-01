@@ -14,20 +14,23 @@ class Combate02 {
         print("\n\nPersonagem: \(jogador.nome)")
         print("Ataques: \n[1] Corte com espada\n[2] Feitiço retardatário\n[3] Defender")
         print("Vida: \(jogador.vida)")
+        var escolhaAtaque: String
         
-        print("\nEscolha seu ataque: ")
-        let escolhaAtaque = readLine()
-        
-        switch escolhaAtaque {
-        case "1":
-            ataqueEspada()
-        case "2":
-            feiticoDoodou()
-        case "3":
-            return
-        default:
-            print("Digite uma opção válida.")
-        }
+        repeat {
+            print("\nEscolha seu ataque: ")
+            escolhaAtaque = readLine()!
+            
+            switch escolhaAtaque {
+            case "1":
+                ataqueEspada()
+            case "2":
+                feiticoDoodou()
+            case "3":
+                return
+            default:
+                print("Digite uma opção válida.")
+            }
+        } while escolhaAtaque != "1" && escolhaAtaque != "2"
     }
     
     func feiticoDoodou() {

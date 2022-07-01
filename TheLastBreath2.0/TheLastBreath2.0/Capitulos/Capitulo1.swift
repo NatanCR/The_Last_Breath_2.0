@@ -40,12 +40,19 @@ Grannus reúne todos os cidadãos da cidade que estavam perto do local onde os d
 
 
 """)
-        print("[1] - Descobrir o que Centrion quis dizer \n[2] - Continuar história.")
-        let centrion: String = readLine()!
-        
-        if centrion == "1" {
-            historiaCentrion()
-        }
+        var centrion: String
+        repeat {
+            print("[1] Descobrir o que Centrion quis dizer ou [2] Continuar história.")
+            centrion = readLine()!
+            
+            if centrion == "1" {
+                historiaCentrion()
+            } else if centrion == "2" {
+                print("")
+            } else {
+                print("Digite uma opção válida.")
+            }
+        } while centrion != "1" && centrion != "2"
         
         print("""
 
@@ -85,7 +92,9 @@ Depois de uma dura batalha o Mestre dos magos e seu Aprendiz retornam para casa 
 
 - Mestre dos magos: Eu vou levá-lo comigo e cuidar dele, tenho certeza que ele se dará muito bem com meus filhos!
 
-.:: 1 ANOS DEPOIS ::.
+
+..:: 1 ANOS DEPOIS ::..
+
 
 - Grannus: Mestre, eu trouxe mais um chá de verdilho pra você, isso tem te ajudado com o sua fraqueza. Por favor beba!
 
@@ -104,8 +113,7 @@ Após a morte de seu pai, o Mestre dos Magos, Solveig o filho mais velho leva se
 
 - Solveig: \(nomeJogador) preciso lhe ensinar os conhecimentos que nosso pai tinha, para que um dia você possa se defender sozinho, você entende isso?
 
-[1] Aprender os conhecimentos
-[2] Ignorar Solveig
+[1] Aprender os conhecimentos ou [2] Ignorar Solveig
 
 """)
             escolha = readLine()!

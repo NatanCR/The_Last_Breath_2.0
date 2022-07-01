@@ -15,7 +15,6 @@ public class InicioJogo {
       
         var escolha: String
         let capitulo1 = Capitulo1()
-        let menu = Menu()
         
         repeat {
             print("\n\(nomeJogador) gostaria de saber mais sobre a trama no qual você está prestes a entrar ou ir direto para o jogo?")
@@ -28,9 +27,9 @@ public class InicioJogo {
             case "2":
                 capitulo1.capitulo1()
             case "3":
-                menu.menuJogo()
+                return
             default:
-                print("\nDigite um valor válido!")
+                print("\nDigite um opção válido!")
             }
         } while escolha != "3"
     }
@@ -38,9 +37,11 @@ public class InicioJogo {
     private func sinopse() {
         let capitulo1 = Capitulo1()
         print("""
+
 A história se baseia em uma trama repleta de mistérios e magias, onde você viajará em busca da cura que irá salvar sua irmã de uma maldição lançada por um mago poderoso. Durante esta jornada você irá enfrentar diversos obstáculos e desafios que despertará habilidades ocultas dentro de você.
 
         Agora você sabe o seu destino!
+
 """)
         print("\nIniciando jogo...")
         capitulo1.capitulo1()

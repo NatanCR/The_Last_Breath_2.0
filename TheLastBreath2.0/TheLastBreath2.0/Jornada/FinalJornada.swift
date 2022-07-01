@@ -12,7 +12,7 @@ class FinalJornada {
     public func finalJornada() {
         print("""
 
-Chegada no Castelo de Grannus
+- Chegada no Castelo de Grannus -
 
 
 CAPÍTULO FINAL - O segredo é revelado
@@ -20,17 +20,20 @@ CAPÍTULO FINAL - O segredo é revelado
 
 - Doodou: Você está pronto \(nomeJogador)?
 
-- \(nomeJogador): [1] Estou pronto! ou [2] Ele vai pagar pelo o que fez!
-
 """)
-        let escolhaPronto = readLine()!
-        if escolhaPronto == "1" {
-            print("Estou pronto!")
-        } else if escolhaPronto == "2" {
-            print("Ele vai pagar pelo o que fez!")
-        } else {
-            print("Escolha uma opção válida.")
-        }
+        var escolhaPronto: String
+        
+        repeat {
+            print("- \(nomeJogador): [1] Estou pronto! ou [2] Ele vai pagar pelo o que fez!")
+            escolhaPronto = readLine()!
+            if escolhaPronto == "1" {
+                print("\nEstou pronto!")
+            } else if escolhaPronto == "2" {
+                print("\nEle vai pagar pelo o que fez!")
+            } else {
+                print("\nEscolha uma opção válida.")
+            }
+        } while escolhaPronto != "1" && escolhaPronto != "2"
         
         print("""
 
@@ -40,32 +43,43 @@ CAPÍTULO FINAL - O segredo é revelado
 
 - Doodou: Tome essa pílula de comida, vai renovar suas energias!
 
-- \(nomeJogador): [1] Aceitar ou [2] Recusar
-
 """)
-        let escolhaPilula = readLine()
-        if escolhaPilula == "1" {
-            jogador.vida = 100
-        } else if escolhaPilula == "2" {
-            jogador.vida = 90
-        }
+        var escolhaPilula: String
+        
+        repeat {
+            print("- \(nomeJogador): [1] Aceitar ou [2] Recusar")
+            escolhaPilula = readLine()!
+            if escolhaPilula == "1" {
+                jogador.vida = 100
+                print("\nVida \(nomeJogador): \(jogador.vida)")
+            } else if escolhaPilula == "2" {
+                jogador.vida = 90
+                print("\nVida \(nomeJogador): \(jogador.vida)")
+            } else {
+                print("\nDigite uma opção válida.")
+            }
+        } while escolhaPilula != "1" && escolhaPilula != "2"
+        
         
         print("""
+
 - \(nomeJogador): Certo vamos andando!
 
 - Doodou: Que estranho não há guardas e não vejo ninguém.
 
-- \(nomeJogador): [1] Ele deve ser muito convencido mesmo. ou [2] Isso pode ser uma armadilha!"
-
 """)
-        let escolha1 = readLine()!
-        if escolha1 == "1" {
-            print("Ele deve ser muito convencido mesmo.")
-        } else if escolhaPronto == "2" {
-            print("Isso pode ser uma armadilha!")
-        } else {
-            print("Escolha uma opção válida.")
-        }
+        var escolhaFala1: String
+        repeat {
+            print("- \(nomeJogador): [1] Ele deve ser muito convencido mesmo. ou [2] Isso pode ser uma armadilha!")
+            escolhaFala1 = readLine()!
+            if escolhaFala1 == "1" {
+                print("\nEle deve ser muito convencido mesmo.")
+            } else if escolhaFala1 == "2" {
+                print("\nIsso pode ser uma armadilha!")
+            } else {
+                print("\nEscolha uma opção válida.")
+            }
+        } while escolhaFala1 != "1" && escolhaFala1 != "2"
         
         print("""
 
@@ -88,40 +102,51 @@ SINTA A FÚRIA ... DA MINHA ESPADA!!!!!!
 - Doodou: \(nomeJogador) não ataque sem uma estratégia e não se esqueça com que estamos lidando!
 
 
-Eles se entreolharam... \(nomeJogador)estava carregado de lembranças, de uma luta que ficou no passado, mas ainda marcava o presente. A intensa magia de Grannus fazia o clima ficar denso e sombrio, mas \(nomeJogador) levantou sua espada e se preparou para o combate...
+Eles se entreolharam... \(nomeJogador) estava carregado de lembranças, de uma luta que ficou no passado, mas ainda marcava o presente. A intensa magia de Grannus fazia o clima ficar denso e sombrio, mas \(nomeJogador) levantou sua espada e se preparou para o combate...
 Estavam um de frente para o outro, até que Grannus resolveu se pronunciar:
 
 
 - Grannus: Eu sabia que vocês viriam atrás de mim! Mas para que? Para morrer igual seu pai miserável? Se veio me matar, vai precisar muito mais que uma espada e um duende HAHAHAHAHA!!!!
 
-- \(nomeJogador): [1] Você foi covarde matando meu pai enquanto ele estava fraco! ou [2] Você vai pagar por tudo que fez cretino!
-
 """)
         
-        var escolhaFala1 = readLine()!
-        if escolhaFala1 == "1" {
-            print("Você foi covarde matando meu pai enquanto ele estava fraco!")
-        } else if escolhaFala1 == "2" {
-            print("Você vai pagar por tudo que fez cretino!")
-        }
+        var escolhaFala2: String
         
-        print("""
+        repeat {
+            print("- \(nomeJogador): [1] Você foi covarde matando meu pai enquanto ele estava fraco! ou [2] Você vai pagar por tudo que fez cretino!")
+            escolhaFala2 = readLine()!
+            if escolhaFala2 == "1" {
+                print("\nVocê foi covarde matando meu pai enquanto ele estava fraco!")
+            } else if escolhaFala2 == "2" {
+                print("\nVocê vai pagar por tudo que fez cretino!")
+            } else {
+                print("\nDigite uma opção válida.")
+            }
+        } while escolhaFala2 != "1" && escolhaFala2 != "2"
+                    
+                    
+                    print("""
 
 - Grannus: Você é aquela criança? Ah sim eu devo estar certo, eu lembro de você naquele dia!
 
 No dia em que eu salvei a sua vida e o levei para casa em segurança! Eu cuidei de você enquanto seu pai não podia nem levantar da cama, de você e dos seus irmãos, fracos!
 
-- \(nomeJogador): [1] Então se lembra de mim sabe porque eu estou aqui! ou [2] Eu vim acabar com a maldição que você jogou na minha irmã!
-
 """)
-        let escolhaFala2 = readLine()!
-        if escolhaFala2 == "1" {
-            print("Então se lembra de mim sabe porque eu estou aqui!")
-        } else if escolhaFala2 == "2" {
-            print("Eu vim acabar com a maldição que você jogou na minha irmã!")
-        }
-        
-        print("""
+                    var escolhaFala3: String
+                    
+                    repeat {
+            print("- \(nomeJogador): [1] Então se lembra de mim sabe porque eu estou aqui! ou [2] Eu vim acabar com a maldição que você jogou na minha irmã!")
+            escolhaFala3 = readLine()!
+            if escolhaFala3 == "1" {
+                print("Então se lembra de mim sabe porque eu estou aqui!")
+            } else if escolhaFala3 == "2" {
+                print("Eu vim acabar com a maldição que você jogou na minha irmã!")
+            } else {
+                print("Digite uma opção válida.")
+            }
+        } while escolhaFala3 != "1" && escolhaFala3 != "2"
+                    
+                    print("""
 
 - Grannus: HAHAHA você sabe o que vai precisar fazer para conseguir isso não sabe?
 
@@ -134,20 +159,22 @@ Grannus ainda levado pelo feitiço lançado sobre ele, olha com desprezo e ódio
 - Doodou: Aqui pegue isso e jogue na frente dele!!!
 
 """)
-        
-        let escolhaFinal = escolhaFinal()
+                    
+            let escolhaFinal = escolhaFinal()
+                    
         if escolhaFinal == "1" {
-            var batalhaFinal1 = BatalhaFinal1()
+            let batalhaFinal1 = BatalhaFinal1()
+            batalhaFinal1.batalhaFinal1()
         } else if escolhaFinal == "2" {
-            var batalhaFinal2 = BatalhaFinal2()
+            let batalhaFinal2 = BatalhaFinal2()
+            batalhaFinal2.batalhaFinal2()
         }
     }
-    
     
     func escolhaFinal() -> String{
         var escolhaFinal: String
         repeat {
-            print("[1] Jogar poção\n[2] Atacar com a espada")
+            print("[1] Jogar poção ou [2] Atacar com a espada")
             escolhaFinal = readLine()!
             if escolhaFinal != "1" && escolhaFinal != "2" {
                 print("Digite uma opção válida.")

@@ -17,19 +17,24 @@ class Combate01 {
         print("Ataques: \n[1]\(mestreDosMagos.ataqueTenebris)\n[2]\(mestreDosMagos.ataqueVingarceri)")
         print("Vida: \(mestreDosMagos.vida)")
         
-        print("\nEscolha seu ataque: ")
-        var escolhaAtaque = readLine()
+        var escolhaAtaque: String
         
-        if escolhaAtaque == "1" {
-            print(mestreDosMagos.ataqueTenebris)
-            centrion.vida -= mestreDosMagos.ataqueTenebris(atacar: true)
-            print("\nVida Centrion: \(centrion.vida)")
+        repeat {
+            print("\nEscolha seu ataque: ")
+            escolhaAtaque = readLine()!
             
-        } else if escolhaAtaque == "2" {
-            print(mestreDosMagos.ataqueVingarceri)
-            centrion.vida -= mestreDosMagos.ataqueVingarceri(atacar: true)
-            print("\nVida Centrion: \(centrion.vida)")
-        }
+            if escolhaAtaque == "1" {
+                print(mestreDosMagos.ataqueTenebris)
+                centrion.vida -= mestreDosMagos.ataqueTenebris(atacar: true)
+                print("\nVida Centrion: \(centrion.vida)")
+                
+            } else if escolhaAtaque == "2" {
+                print(mestreDosMagos.ataqueVingarceri)
+                centrion.vida -= mestreDosMagos.ataqueVingarceri(atacar: true)
+                print("\nVida Centrion: \(centrion.vida)")
+            }
+        } while escolhaAtaque != "1" && escolhaAtaque != "2"
+        
         
         print("\n\n- Grannus: MESTRE!! Lembra daquele feitiço que você me ensinou?")
         print("\n- Centrion: \(centrion.ataqueRevidus)")
@@ -41,17 +46,21 @@ class Combate01 {
         print("\n\nPersonagem: \(mestreDosMagos.nome)")
         print("Ataques: \n[1]\(mestreDosMagos.ataqueTenebris)\n[2]\(mestreDosMagos.ataqueVingarceri)")
         print("Vida: \(mestreDosMagos.vida)")
-        escolhaAtaque = readLine()
         
-        if escolhaAtaque == "1" {
-            print(mestreDosMagos.ataqueTenebris)
-            centrion.vida -= mestreDosMagos.ataqueTenebris(atacar: true)
-            print("\nVida Centrion: \(centrion.vida)")
-        } else if escolhaAtaque == "2" {
-            print(mestreDosMagos.ataqueVingarceri)
-            centrion.vida -= mestreDosMagos.ataqueVingarceri(atacar: true)
-            print("\nVida Centrion: \(centrion.vida)")
-        }
+        repeat {
+            print("\nEscolha seu ataque: ")
+            escolhaAtaque = readLine()!
+            
+            if escolhaAtaque == "1" {
+                print(mestreDosMagos.ataqueTenebris)
+                centrion.vida -= mestreDosMagos.ataqueTenebris(atacar: true)
+                print("\nVida Centrion: \(centrion.vida)")
+            } else if escolhaAtaque == "2" {
+                print(mestreDosMagos.ataqueVingarceri)
+                centrion.vida -= mestreDosMagos.ataqueVingarceri(atacar: true)
+                print("\nVida Centrion: \(centrion.vida)")
+            }
+        } while escolhaAtaque != "1" && escolhaAtaque != "2"
         
         print("\nO tempo se fecha, nuvens escuras se formam em cima dos magos e o poder do feitiço caí sobre Centrion, o inimigo mesmo derrotado ainda não desistiu da luta e deseja vingança…")
     }

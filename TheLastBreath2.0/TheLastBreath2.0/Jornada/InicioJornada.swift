@@ -39,16 +39,24 @@ No mesmo dia \(nomeJogador) e o duende Doodou partem em uma jornada contra o tem
 
 - Solveig: Meu irmão, nós não temos escolha. Você precisa ir atrás do Grannus e descobrir um jeito de curar Bryana.
 
-[1] O que é um Hipogrifo?
-[2] Continuar andando
+""")
+        
+        var perguntaHipogrifo: String
+        repeat {
+            print("""
 
+[1] O que é um Hipogrifo? ou [2] Continuar andando
 
 """)
-        let escolha1: String = readLine()!
+            perguntaHipogrifo = readLine()!
+            if perguntaHipogrifo == "1" {
+                hipogrifo()
+            }
+            
+        } while perguntaHipogrifo != "1" && perguntaHipogrifo != "2"
         
-        if escolha1 == "1" {
-            hipogrifo()
-        }
+        
+       
         
         print("""
 
@@ -58,7 +66,7 @@ No mesmo dia \(nomeJogador) e o duende Doodou partem em uma jornada contra o tem
 
 - \(nomeJogador): Estou vendo algo se mexendo nas árvores!!
 
-- \(nomeJogador): [1] Meu deus o que é isso? ou [2] É melhor essa espada ser bem afiada!
+- \(nomeJogador): Meu deus o que é isso??? É melhor essa espada ser bem afiada!
 
 - Doodou: Eu não posso acreditar!! ISSO É MESMO O QUE ESTOU PENSANDO!!?
 
@@ -73,13 +81,15 @@ No mesmo dia \(nomeJogador) e o duende Doodou partem em uma jornada contra o tem
 """)
         var escolha2: String
         repeat{
-            print("[1] Ajoelhar-se e fazer a reverência \n[2] Pegar a espada")
+            print("[1] Ajoelhar-se e fazer a reverência ou [2] Pegar a espada")
             escolha2 = readLine()!
             
             if escolha2 == "2" {
                 pegarEspada()
             } else if escolha2 == "1"{
                 fazerReverencia()
+            } else {
+                print("Digite uma opção válida.")
             }
         } while escolha2 != "1" && escolha2 != "2"
         
@@ -107,17 +117,22 @@ No mesmo dia \(nomeJogador) e o duende Doodou partem em uma jornada contra o tem
 
 - Doodou: Olha!!! Estou vendo o Castelo de Grannus no topo, estamos chegando.
 
-- \(nomeJogador): [1] Vamos garoto, deixe a gente na frente do castelo! ou [2] Melhor descermos mais afastados, não sabemos o que nos espera.
-
 """)
 
-        let escolhaCastelo = readLine()!
+        var escolhaCastelo: String
         
-        if escolhaCastelo == "1" {
-            print("- Doodou: Grannus vai ver a gente se formos bem na frente do castelo não acha? Está querendo morrer hoje? Porque eu não!!")
-        } else if escolhaCastelo == "2" {
-            print("- Doodou: Você tem razão precisamos descer mais afastados e voltar andando")
-        }
+        repeat {
+            print("- \(nomeJogador): [1] Vamos garoto, deixe a gente na frente do castelo! ou [2] Melhor descermos mais afastados, não sabemos o que nos espera.")
+            escolhaCastelo = readLine()!
+            if escolhaCastelo == "1" {
+                print("\n- Doodou: Grannus vai ver a gente se formos bem na frente do castelo não acha? Está querendo morrer hoje? Porque eu não!!")
+            } else if escolhaCastelo == "2" {
+                print("\n- Doodou: Você tem razão precisamos descer mais afastados e voltar andando")
+            } else {
+                print("Digite uma opção válida.")
+            }
+        } while escolhaCastelo != "1" && escolhaCastelo != "2"
+        
         
         print("""
 

@@ -28,8 +28,7 @@ Ao completar 17 anos, Bryana começa a receber sinais de que seu tempo de vida e
             print("""
 - Solveig: Meu irmão, nós não temos escolha. Você precisa ir atrás do Grannus e descobrir um jeito de curar Bryana.
 
-[1] Eu trarei a cura junto comigo!!
-[2] Bryana precisa aguentar por mais tempo!
+[1] Eu trarei a cura junto comigo!! ou [2] Bryana precisa aguentar por mais tempo!
 
 """)
             escolha1 = readLine()!
@@ -62,8 +61,7 @@ Ao completar 17 anos, Bryana começa a receber sinais de que seu tempo de vida e
         
         repeat{
             print("""
-[1] Você deveria ter nos contado!!
-[2] Você sempre cuidou de nós e eu sou grato por isso!!
+[1] Você deveria ter nos contado!! ou [2] Você sempre cuidou de nós e eu sou grato por isso!!
 
 """)
             escolha2 = readLine()!
@@ -92,8 +90,7 @@ Ao completar 17 anos, Bryana começa a receber sinais de que seu tempo de vida e
             print("""
 - Solveig: Tome, leve essa armadura será muito útil a você!
 
-[1] - Pegar armadura
-[2] - Recusar armadura
+[1] Pegar armadura ou [2] Recusar armadura
 
 """)
             escolhaArmadura = readLine()!

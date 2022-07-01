@@ -9,10 +9,11 @@ import Foundation
 
 public class Menu{
     
-    public func menuJogo(){
+    public func menuJogo() {
         let inicioJogo = InicioJogo()
         let espaco = "                              "
         var escolhaMenu: String = ""
+        
         print("\n\n\n\n\n\n\n\n\n")
         print("\n\n" +
               "\n\(espaco)█████████████████████████████████████████████████████████████████████████████████████████████████████████████" +
@@ -61,7 +62,7 @@ public class Menu{
                 print("\nVocê saiu do jogo.")
                 break
             default:
-                print("\nDigite um valor válido.")
+                print("\nDigite uma opção válido.")
             }
         } while escolhaMenu != "5"
     }

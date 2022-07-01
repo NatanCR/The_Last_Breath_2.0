@@ -25,7 +25,7 @@ repeat {
     }else if pronto == "2" {
         print("\nNão se engane, você não tem muita escolha... Abrace o destino!")
     } else {
-        print("Escolha uma opção válida!")
+        print("Digite uma opção válida!")
     }
     
 } while pronto != "1"
