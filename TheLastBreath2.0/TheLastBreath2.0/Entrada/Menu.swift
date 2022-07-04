@@ -14,8 +14,8 @@ public class Menu{
         let espaco = "                              "
         var escolhaMenu: String = ""
         
-        print("\n\n\n\n\n\n\n\n\n")
-        print("\n\n" +
+        escritaConsole.printaEscrita("\n\n\n\n\n\n\n\n\n")
+        escritaConsole.printaSimbolos("\n\n" +
               "\n\(espaco)█████████████████████████████████████████████████████████████████████████████████████████████████████████████" +
               "\n\(espaco)█░░░░░░░░░░░░░░█░░░░░░██░░░░░░█░░░░░░░░░░░░░░████░░░░░░█████████░░░░░░░░░░░░░░█░░░░░░░░░░░░░░█░░░░░░░░░░░░░░█" +
               "\n\(espaco)█░░▄▀▄▀▄▀▄▀▄▀░░█░░▄▀░░██░░▄▀░░█░░▄▀▄▀▄▀▄▀▄▀░░████░░▄▀░░█████████░░▄▀▄▀▄▀▄▀▄▀░░█░░▄▀▄▀▄▀▄▀▄▀░░█░░▄▀▄▀▄▀▄▀▄▀░░█" +
@@ -42,7 +42,7 @@ public class Menu{
               "\n\(espaco)█░░▄▀▄▀▄▀▄▀▄▀▄▀░░█░░▄▀░░██░░▄▀▄▀▄▀░░█░░▄▀▄▀▄▀▄▀▄▀░░█░░▄▀░░██░░▄▀░░█████░░▄▀░░█████░░▄▀░░██░░▄▀░░█" +
               "\n\(espaco)█░░░░░░░░░░░░░░░░█░░░░░░██░░░░░░░░░░█░░░░░░░░░░░░░░█░░░░░░██░░░░░░█████░░░░░░█████░░░░░░██░░░░░░█" +
               "\n\(espaco)█████████████████████████████████████████████████████████████████████████████████████████████████")
-        print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+        escritaConsole.printaEscrita("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
         
         repeat {
             
@@ -53,7 +53,7 @@ public class Menu{
             case "1":
                 inicioJogo.entrada()
             case "2":
-                print("\nO jogo é um modelo RPG textual e você terá decisões a tomar durante o decorrer da história, mas preste atenção pois dependendo da sua escolha o jogo pode ter um final diferente do outro. Escolha com sabedoria e bom jogo!")
+                escritaConsole.printaEscrita("\nO jogo é um modelo RPG textual e você terá decisões a tomar durante o decorrer da história, mas preste atenção pois dependendo da sua escolha o jogo pode ter um final diferente do outro. Escolha com sabedoria e bom jogo!")
             case "3":
                 creditos()
             case "4":
@@ -68,7 +68,7 @@ public class Menu{
     }
     
    private func mostraPersonagens() -> [PersonagensJogo] {
-        print("\nNão se apegue a eles, podem acabar não sobrevivendo até o final do jogo...")
+       escritaConsole.printaEscrita("\nNão se apegue a eles, podem acabar não sobrevivendo até o final do jogo...")
        
         let personagensJogo = PersonagensJogo(nome: ["Mestre dos Magos", "Centrion", "Grannus", "Solveig", "Bryana", "Doodou", "Player"], descricao: ["Mago supremo do universo.", "Mago irmão do Mestre dos Magos, que foi corrompido pela fome de poder ao longo dos anos.", "Mago aprendiz do Mestre dos Magos.", "Filho mais velho do Mestre dos Magos e futuro feiticeiro.", "Irmã mais nova de Solveig.", "Duende verde amigo do Mestre dos Magos que o acompanhou durante longos anos de jornada.", "Filho adotivo que foi perdido pelos pais durante uma destruição causada na sua cidade por dois magos."])
         
@@ -79,7 +79,7 @@ public class Menu{
     }
     
     public func creditos() {
-        print("\nEste jogo foi desenvolvido e produzido por Natan Camargo Rodrigues.")
+        escritaConsole.printaEscrita("\nEste jogo foi desenvolvido e produzido por Natan Camargo Rodrigues.")
     }
     
     init() { }

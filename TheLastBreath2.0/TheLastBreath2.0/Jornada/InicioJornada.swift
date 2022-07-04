@@ -10,16 +10,20 @@ import Foundation
 class InicioJornada {
     
     func inicioJornada() {
-        print("""
+        escritaConsole.printaEscrita("""
 
 No mesmo dia \(nomeJogador) e o duende Doodou partem em uma jornada contra o tempo para que pudessem achar um jeito de salvar Bryana.
 
-- \(nomeJogador): Então Doodou nós vamos para norte, você lembra do que Solveig disse, não é?
+- \(nomeJogador): Então Doodou nós vamos para o norte, você lembra do que Solveig disse, não é?
 
 """)
-        jogador.inventario.adicionarObjetos()
+        if jogador.inventario.verificaItem(nome: "Mapa") != nil {
+            print("")
+        } else {
+            jogador.inventario.adicionarObjetos()
+        }
         jogador.inventario.mostrarInventario(vetor: jogador.inventario.meuInventario)
-        print("""
+        escritaConsole.printaEscrita("""
 
 - Doodou: Certo meu rapaz, você sabe o que encontraremos ao norte até chegarmos no nosso destino, não sabe? Existem animais mágicos que vivem no caminho até a Montanha de Elso.
 
@@ -33,11 +37,9 @@ No mesmo dia \(nomeJogador) e o duende Doodou partem em uma jornada contra o tem
 
 - \(nomeJogador): Aliás porque estamos indo para o norte?
 
-- Doodou: Seu irmão acredita que devemos procurar as repostas com Grannus. E as lendas dizem que ele tem um reino ao norte, depois do bosque dos Elfos.
+- Doodou: Seu irmão acredita que devemos procurar as repostas com Grannus e as lendas dizem que ele tem um reino ao norte.
 
 - \(nomeJogador): Certo!
-
-- Solveig: Meu irmão, nós não temos escolha. Você precisa ir atrás do Grannus e descobrir um jeito de curar Bryana.
 
 """)
         
@@ -58,7 +60,7 @@ No mesmo dia \(nomeJogador) e o duende Doodou partem em uma jornada contra o tem
         
        
         
-        print("""
+        escritaConsole.printaEscrita("""
 
 - \(nomeJogador): Eiiii Doodou, estou vendo a montanha!!!
 
@@ -93,7 +95,7 @@ No mesmo dia \(nomeJogador) e o duende Doodou partem em uma jornada contra o tem
             }
         } while escolha2 != "1" && escolha2 != "2"
         
-        print("""
+        escritaConsole.printaEscrita("""
 
 - Doodou: \(nomeJogador) o Hipogrifo está mais calmo? Acho que tive uma ideia!
 
@@ -103,7 +105,7 @@ No mesmo dia \(nomeJogador) e o duende Doodou partem em uma jornada contra o tem
 """)
         var escolhaHipogrifo: String = readLine()!
         
-        print("""
+        escritaConsole.printaEscrita("""
 
 - Doodou: Isso \(nomeJogador) era exatamente o que eu estava pensando!
 
@@ -125,16 +127,16 @@ No mesmo dia \(nomeJogador) e o duende Doodou partem em uma jornada contra o tem
             print("- \(nomeJogador): [1] Vamos garoto, deixe a gente na frente do castelo! ou [2] Melhor descermos mais afastados, não sabemos o que nos espera.")
             escolhaCastelo = readLine()!
             if escolhaCastelo == "1" {
-                print("\n- Doodou: Grannus vai ver a gente se formos bem na frente do castelo não acha? Está querendo morrer hoje? Porque eu não!!")
+                escritaConsole.printaEscrita("\n- Doodou: Grannus vai ver a gente se formos bem na frente do castelo não acha? Está querendo morrer hoje? Porque eu não!!")
             } else if escolhaCastelo == "2" {
-                print("\n- Doodou: Você tem razão precisamos descer mais afastados e voltar andando")
+                escritaConsole.printaEscrita("\n- Doodou: Você tem razão precisamos descer mais afastados e voltar andando")
             } else {
                 print("Digite uma opção válida.")
             }
         } while escolhaCastelo != "1" && escolhaCastelo != "2"
         
         
-        print("""
+        escritaConsole.printaEscrita("""
 
 - \(nomeJogador): Ótimo garoto, agora você está livre! Obrigado por nos ajudar!
 
@@ -149,11 +151,11 @@ Após uma pequena viagem até encontrarem um Hipogrifo \(nomeJogador) e seu duen
     }
     
     func pegarEspada() {
-        print("\nVocê irritou o Hipogrifo, prepare-se para lutar!\n")
+        escritaConsole.printaEscrita("\nVocê irritou o Hipogrifo, prepare-se para lutar!\n")
         
         jogador.inventario.mostrarInventario(vetor: jogador.inventario.meuInventario)
         
-        print("""
+        escritaConsole.printaEscrita("""
 
 
 - Hiprogrífo: GRRRUUUUUUWW!!!!!!
@@ -167,7 +169,7 @@ Após uma pequena viagem até encontrarem um Hipogrifo \(nomeJogador) e seu duen
     }
     
     func fazerReverencia() {
-        print("""
+        escritaConsole.printaEscrita("""
 
 - Doodou: Bom garoto, fique tranquilo! Ele está apenas te analisando... mantenha-se calmo!
 
@@ -191,7 +193,7 @@ Após uma pequena viagem até encontrarem um Hipogrifo \(nomeJogador) e seu duen
             segredoCorrente = readLine()!
         } while segredoCorrente != "1"
         
-        print("""
+        escritaConsole.printaEscrita("""
 
 - Doodou: Ei, espera aí! Acabei de lembrar que tenho algo aqui na mochila que vai resolver isso!!
 
@@ -207,7 +209,7 @@ Após uma pequena viagem até encontrarem um Hipogrifo \(nomeJogador) e seu duen
     }
     
     func hipogrifo() {
-        print("""
+        escritaConsole.printaEscrita("""
 
 - Doodou: Hipogrifos são criaturas mágicas que prezam o respeito e a única forma de evitar um ataque mortal desse animal, é mostrando que você tem boas intenções realizando uma reverência. Se o hipogrifo retribuir, é sinal de que você está seguro. Se não... bom você já pode imaginar!
 

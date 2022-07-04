@@ -22,6 +22,15 @@ public struct Inventario {
 public struct FuncoesInventario {
     var meuInventario: [Inventario] = []
     
+    public func verificaItem(nome: String) -> Inventario? {
+        for i in meuInventario {
+            if nome == i.tituloObjeto {
+                return i
+            }
+        }
+        return nil
+    }
+    
     public mutating func salvarInventario(tituloObjeto: String, descricaoObjeto: String, quantidade: Int) {
         meuInventario.append(Inventario.init(tituloObjeto, descricaoObjeto, quantidade))
     }
@@ -40,7 +49,7 @@ public struct FuncoesInventario {
     
     public mutating func adicionarObjetos() {
         meuInventario.append(Inventario.init("Espada do Dragão", "Espada forjada com pele de dragão", 1))
-        meuInventario.append(Inventario.init("Feitiço Retardatário", "Feitiço criado pelo Doodou para atrasar os movimentos do inimigo", 2))
+        meuInventario.append(Inventario.init("Feitiço Retardatário", "Feitiço criado pelo Doodou para atrasar os movimentos do inimigo", 4))
         meuInventario.append(Inventario.init("Mapa", "Mapa do reino", 1))
     }
 }

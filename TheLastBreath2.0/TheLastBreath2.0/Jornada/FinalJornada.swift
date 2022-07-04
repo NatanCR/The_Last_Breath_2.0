@@ -10,7 +10,7 @@ import Foundation
 class FinalJornada {
     
     public func finalJornada() {
-        print("""
+        escritaConsole.printaEscrita("""
 
 - Chegada no Castelo de Grannus -
 
@@ -27,15 +27,15 @@ CAPÍTULO FINAL - O segredo é revelado
             print("- \(nomeJogador): [1] Estou pronto! ou [2] Ele vai pagar pelo o que fez!")
             escolhaPronto = readLine()!
             if escolhaPronto == "1" {
-                print("\nEstou pronto!")
+                escritaConsole.printaEscrita("\nEstou pronto!")
             } else if escolhaPronto == "2" {
-                print("\nEle vai pagar pelo o que fez!")
+                escritaConsole.printaEscrita("\nEle vai pagar pelo o que fez!")
             } else {
                 print("\nEscolha uma opção válida.")
             }
         } while escolhaPronto != "1" && escolhaPronto != "2"
         
-        print("""
+        escritaConsole.printaEscrita("""
 
 - Doodou: Muito bem precisamos seguir em frente! Vamos descobrir como salvar sua irmã e acabar com tudo isso.
 
@@ -61,7 +61,7 @@ CAPÍTULO FINAL - O segredo é revelado
         } while escolhaPilula != "1" && escolhaPilula != "2"
         
         
-        print("""
+        escritaConsole.printaEscrita("""
 
 - \(nomeJogador): Certo vamos andando!
 
@@ -73,15 +73,15 @@ CAPÍTULO FINAL - O segredo é revelado
             print("- \(nomeJogador): [1] Ele deve ser muito convencido mesmo. ou [2] Isso pode ser uma armadilha!")
             escolhaFala1 = readLine()!
             if escolhaFala1 == "1" {
-                print("\nEle deve ser muito convencido mesmo.")
+                escritaConsole.printaEscrita("\nEle deve ser muito convencido mesmo.")
             } else if escolhaFala1 == "2" {
-                print("\nIsso pode ser uma armadilha!")
+                escritaConsole.printaEscrita("\nIsso pode ser uma armadilha!")
             } else {
                 print("\nEscolha uma opção válida.")
             }
         } while escolhaFala1 != "1" && escolhaFala1 != "2"
         
-        print("""
+        escritaConsole.printaEscrita("""
 
 - Doodou: Você pode estar certo! Tenha cuidado!!!
 
@@ -116,16 +116,16 @@ Estavam um de frente para o outro, até que Grannus resolveu se pronunciar:
             print("- \(nomeJogador): [1] Você foi covarde matando meu pai enquanto ele estava fraco! ou [2] Você vai pagar por tudo que fez cretino!")
             escolhaFala2 = readLine()!
             if escolhaFala2 == "1" {
-                print("\nVocê foi covarde matando meu pai enquanto ele estava fraco!")
+                escritaConsole.printaEscrita("\nVocê foi covarde matando meu pai enquanto ele estava fraco!")
             } else if escolhaFala2 == "2" {
-                print("\nVocê vai pagar por tudo que fez cretino!")
+                escritaConsole.printaEscrita("\nVocê vai pagar por tudo que fez cretino!")
             } else {
                 print("\nDigite uma opção válida.")
             }
         } while escolhaFala2 != "1" && escolhaFala2 != "2"
                     
                     
-                    print("""
+        escritaConsole.printaEscrita("""
 
 - Grannus: Você é aquela criança? Ah sim eu devo estar certo, eu lembro de você naquele dia!
 
@@ -138,15 +138,15 @@ No dia em que eu salvei a sua vida e o levei para casa em segurança! Eu cuidei 
             print("- \(nomeJogador): [1] Então se lembra de mim sabe porque eu estou aqui! ou [2] Eu vim acabar com a maldição que você jogou na minha irmã!")
             escolhaFala3 = readLine()!
             if escolhaFala3 == "1" {
-                print("Então se lembra de mim sabe porque eu estou aqui!")
+                escritaConsole.printaEscrita("Então se lembra de mim sabe porque eu estou aqui!")
             } else if escolhaFala3 == "2" {
-                print("Eu vim acabar com a maldição que você jogou na minha irmã!")
+                escritaConsole.printaEscrita("Eu vim acabar com a maldição que você jogou na minha irmã!")
             } else {
                 print("Digite uma opção válida.")
             }
         } while escolhaFala3 != "1" && escolhaFala3 != "2"
                     
-                    print("""
+        escritaConsole.printaEscrita("""
 
 - Grannus: HAHAHA você sabe o que vai precisar fazer para conseguir isso não sabe?
 

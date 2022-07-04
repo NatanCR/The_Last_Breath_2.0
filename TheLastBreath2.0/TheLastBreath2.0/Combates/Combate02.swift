@@ -34,7 +34,7 @@ class Combate02 {
     }
     
     func feiticoDoodou() {
-        print("""
+        escritaConsole.printaEscrita("""
 
 - \(nomeJogador): AHHH TOME ISSO SEU MONSTRO!!!
 
@@ -44,7 +44,7 @@ class Combate02 {
         hipogrifo.vida -= jogador.ataqueFeitico(atacar: true)
         print("\nVida Hipogrifo: \(hipogrifo.vida)")
         
-        print("\n- \(nomeJogador): OWWW droga ele está furioso! Doodou me ajudeeee!!")
+        escritaConsole.printaEscrita("\n- \(nomeJogador): OWWW droga ele está furioso! Doodou me ajudeeee!!")
         print("\n- Hipogrifo: Ataque de bicada!")
         jogador.vida -= hipogrifo.ataqueBicada(atacar: true)
         print("\nVida \(nomeJogador): \(jogador.vida)")
@@ -84,7 +84,7 @@ class Combate02 {
             
         } while jogador.vida > 0
         
-        print("""
+        escritaConsole.printaEscrita("""
 
 🄶🄰🄼🄴 🄾🅅🄴🅁
 
@@ -115,7 +115,7 @@ Você perdeu todos os seus pontos de vida! Na próxima pense melhor antes de ata
     
     
     func ataqueEspada() {
-        print("""
+        escritaConsole.printaEscrita("""
 
 - \(nomeJogador): AHHH TOME ISSO SEU MONSTRO!!!
 
@@ -126,7 +126,7 @@ Você perdeu todos os seus pontos de vida! Na próxima pense melhor antes de ata
         hipogrifo.vida -= jogador.ataqueEspada(atacar: true)
         print("\nVida Hipogrifo: \(hipogrifo.vida)")
         
-        print("\n- \(nomeJogador): OWWW droga ele está furioso! Doodou me ajudeeee!!")
+        escritaConsole.printaEscrita("\n- \(nomeJogador): OWWW droga ele está furioso! Doodou me ajudeeee!!")
         print("\n- Hipogrifo: Ataque de patada!")
         jogador.vida -= hipogrifo.ataquePatas(atacar: true)
         print("\nVida \(nomeJogador): \(jogador.vida)")
@@ -175,7 +175,7 @@ Você perdeu todos os seus pontos de vida! Na próxima pense melhor antes de ata
             
         } while hipogrifo.vida > 0
         
-        print("""
+        escritaConsole.printaEscrita("""
 
 🄶🄰🄼🄴 🄾🅅🄴🅁
 

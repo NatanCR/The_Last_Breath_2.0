@@ -12,7 +12,17 @@ class Console {
         let arr = Array.init(text)
         
         for i in arr {
-            usleep(100001)
+            usleep(100004)
+            print(i, terminator: "")
+        }
+        print("")
+    }
+    
+    public func printaSimbolos(_ text: String) {
+        let arr = Array.init(text)
+        
+        for i in arr {
+            usleep(2000)
             print(i, terminator: "")
         }
         print("")

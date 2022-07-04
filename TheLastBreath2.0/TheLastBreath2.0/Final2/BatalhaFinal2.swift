@@ -11,7 +11,7 @@ class BatalhaFinal2 {
     public func batalhaFinal2() {
         let grannus = Grannus(ataqueRevidus: "REVIDUS", nome: "Grannus", vida: 100)
         
-        print("""
+        escritaConsole.printaEscrita("""
 
 - \(nomeJogador): Certo! AAAARRRGG TOME ISSO!!!!!!!
 
@@ -20,7 +20,7 @@ class BatalhaFinal2 {
         grannus.vida -= 50
         print("Vida Grannus: \(grannus.vida)")
         
-        print("""
+        escritaConsole.printaEscrita("""
 
 - \(nomeJogador): Espera aí, cadê ele?
 
@@ -34,7 +34,7 @@ class BatalhaFinal2 {
         
         jogador.vida -= 30
         
-        print("""
+        escritaConsole.printaEscrita("""
 
 Vida \(nomeJogador): \(jogador.vida)
 
@@ -62,7 +62,7 @@ Vida \(nomeJogador): \(jogador.vida)
             }
         } while escolhaFala1 != "1" && escolhaFala1 != "2"
         
-        print("""
+        escritaConsole.printaEscrita("""
 
     - Doodou: O QUE VOCÊ FEEEZ???
 

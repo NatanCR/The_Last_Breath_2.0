@@ -10,13 +10,13 @@ import Foundation
 class FinalJogo {
     
     func finalJogo() {
-        print("""
+        escritaConsole.printaEscrita("""
 
 - \(nomeJogador): Grannus vamos embora num Hipogrifo, ele é nosso amigo mas por via das dúvidas faça a reverência precisamos de você vivo!
 
 - Grannus: UM HIPOGRIFO?? Só quero entender o que estamos fazendo!
 
-- \(nomeJogador): [1] Fique tranquilo, te explicaremos tudo no caminho!
+- \(nomeJogador): Fique tranquilo, te explicaremos tudo no caminho!
 
 IIIAAARRG
 
@@ -48,15 +48,15 @@ Enquanto o forte Hipogrifo leva-os para casa, Doodou e \(nomeJogador) contam tud
             escolhaFala1 = readLine()!
             
             if escolhaFala1 == "1" {
-                print("\n\(nomeJogador): Você vai poder se desculpar quando salvar a minha irmã!")
+                escritaConsole.printaEscrita("\n\(nomeJogador): Você vai poder se desculpar quando salvar a minha irmã!")
             }else if escolhaFala1 == "2" {
-                print("\n\(nomeJogador): Se não salvarmos ela hoje, ela morrerá à meia noite.")
+                escritaConsole.printaEscrita("\n\(nomeJogador): Se não salvarmos ela hoje, ela morrerá à meia noite.")
             } else {
                 print("\nEscolha uma opção válida.")
             }
         } while escolhaFala1 != "1" && escolhaFala1 != "2"
         
-        print("""
+        escritaConsole.printaEscrita("""
 
 - Doodou: Já estou vendo a casa, vamos lá garoto mais rápido!
 
@@ -69,7 +69,7 @@ Enquanto o forte Hipogrifo leva-os para casa, Doodou e \(nomeJogador) contam tud
             escolhaFala2 = readLine()!
             
             if escolhaFala2 == "1" {
-                print("""
+                escritaConsole.printaEscrita("""
 
 - \(nomeJogador): Solveing chegamos!! Está em casa?
 
@@ -79,7 +79,7 @@ Enquanto o forte Hipogrifo leva-os para casa, Doodou e \(nomeJogador) contam tud
 
 """)
             }else if escolhaFala2 == "2" {
-                print("""
+                escritaConsole.printaEscrita("""
 
 - \(nomeJogador): Está tudo muito calmo, vamos entrar! Hipogrifo, agora você está livre, adeus meu amigo, obrigado por tudo! Vamos Grannus...
 
@@ -97,7 +97,7 @@ Graças a Merlim vocês voltaram!!
             }
         } while escolhaFala2 != "1" && escolhaFala2 != "2"
         
-        print("""
+        escritaConsole.printaEscrita("""
 
 - Solveing: Vocês conseguiram?
 
@@ -129,7 +129,7 @@ Graças a Merlim vocês voltaram!!
             }
         } while escolhaFala3 != "1"
         
-        print("""
+        escritaConsole.printaEscrita("""
 
 - \(nomeJogador): Pode contar, ele veio para nos ajudar!
 
@@ -139,7 +139,7 @@ Graças a Merlim vocês voltaram!!
 
 - Grannus: EU ME SACRIFICO!!!
 
-Depos dessa frase de Grannus, eles se reuniram e decidiram aceitar o desejo de salvar Bryana. Encontram o feitiço mais forte que teria piedade de Grannus e não o machucasse em sua partida, antes de ir Grannus se desculpou com Bryana por tudo que causou a ela e sua família… e então aceitou seu destino com um último suspiro.
+Depoi3s dessa frase de Grannus, eles se reuniram e decidiram aceitar o desejo de salvar Bryana. Encontram o feitiço mais forte que teria piedade de Grannus e não o machucasse em sua partida, antes de ir Grannus se desculpou com Bryana por tudo que causou a ela e sua família… e então aceitou seu destino com um último suspiro.
 
 IN PACE MORIERIS
 

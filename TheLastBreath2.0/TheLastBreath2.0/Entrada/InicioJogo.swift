@@ -10,8 +10,8 @@ import Foundation
 public class InicioJogo {
     
     public func entrada() {
-        print("\n\n..:: THE • LAST • BREATH ::..")
-        print("\nBem-vindo ao intenso mundo de The Last Breath!")
+        escritaConsole.printaEscrita("\n\n..:: THE • LAST • BREATH ::..")
+        escritaConsole.printaEscrita("\nBem-vindo ao intenso mundo de The Last Breath!")
       
         var escolha: String
         let capitulo1 = Capitulo1()
@@ -36,14 +36,14 @@ public class InicioJogo {
     
     private func sinopse() {
         let capitulo1 = Capitulo1()
-        print("""
+        escritaConsole.printaEscrita("""
 
 A história se baseia em uma trama repleta de mistérios e magias, onde você viajará em busca da cura que irá salvar sua irmã de uma maldição lançada por um mago poderoso. Durante esta jornada você irá enfrentar diversos obstáculos e desafios que despertará habilidades ocultas dentro de você.
 
         Agora você sabe o seu destino!
 
 """)
-        print("\nIniciando jogo...")
+        escritaConsole.printaEscrita("\nIniciando jogo...")
         capitulo1.capitulo1()
     }
     init() { }
