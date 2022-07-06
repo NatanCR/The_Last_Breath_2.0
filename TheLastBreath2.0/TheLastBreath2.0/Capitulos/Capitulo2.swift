@@ -10,7 +10,7 @@ import Foundation
 class Capitulo2 {
     
     func capitulo2() {
-        escritaConsole.printaEscrita("""
+        usaConsole.printaEscrita("""
 
 
 
@@ -22,28 +22,15 @@ Ao completar 17 anos, Bryana começa a receber sinais de que seu tempo de vida e
 
 
 """)
-        var escolha1: String
-        
-        repeat{
-            print("""
+        let fala1 = usaConsole.repeatWhile(fala: """
 - Solveig: Meu irmão, nós não temos escolha. Você precisa ir atrás do Grannus e descobrir um jeito de curar Bryana.
 
-[1] Eu trarei a cura junto comigo!! ou [2] Bryana precisa aguentar por mais tempo!
+- \(nomeJogador): [1] Eu trarei a cura junto comigo!! ou [2] Bryana precisa aguentar por mais tempo!
 
-""")
-            escolha1 = readLine()!
-            
-            if escolha1 == "1" {
-                escritaConsole.printaEscrita("Eu trarei a cura junto comigo!!")
-            } else if escolha1 == "2" {
-                escritaConsole.printaEscrita("Bryana precisa aguentar por mais tempo!")
-            } else {
-                print("Escolha uma opção válida.")
-            }
-            
-        } while escolha1 != "1" && escolha1 != "2"
+""", opcao1: "- \(nomeJogador): Eu trarei a cura junto comigo!!", opcao2: "- \(nomeJogador): Bryana precisa aguentar por mais tempo!")
         
-        escritaConsole.printaEscrita("""
+        usaConsole.printaEscrita("""
+\(fala1)
 
 - Solveig: Eu estou buscando alguma fórmula ou feitiço nos livros do nosso pai para tentar retardar o tempo dela para que você tenha mais tempo e consiga achar o Grannus, mas até hoje nada do que eu tentei funcionou...
 
@@ -57,25 +44,10 @@ Ao completar 17 anos, Bryana começa a receber sinais de que seu tempo de vida e
 
 """)
         
-        var escolha2: String
+        let fala2 = usaConsole.repeatWhile(fala: "- \(nomeJogador): [1] Você deveria ter nos contado!! ou [2] Você sempre cuidou de nós e eu sou grato por isso!!", opcao1: "\n- \(nomeJogador): Você deveria ter nos contado!!", opcao2: "\n- \(nomeJogador): Você sempre cuidou de nós e eu sou grato por isso!!")
         
-        repeat{
-            print("""
-[1] Você deveria ter nos contado!! ou [2] Você sempre cuidou de nós e eu sou grato por isso!!
-
-""")
-            escolha2 = readLine()!
-            
-            if escolha2 == "1" {
-                escritaConsole.printaEscrita("\nVocê deveria ter nos contado!!")
-            } else if escolha2 == "2" {
-                escritaConsole.printaEscrita("\nVocê sempre cuidou de nós e eu sou grato por isso!!")
-            } else {
-                print("Escolha uma opção válida.")
-            }
-        } while escolha2 != "1" && escolha2 != "2"
-        
-        escritaConsole.printaEscrita("""
+        usaConsole.printaEscrita("""
+\(fala2)
 
 - \(nomeJogador): Agora é melhor que eu parta antes do anoitecer, será uma longa jornada!
 
@@ -97,7 +69,7 @@ Ao completar 17 anos, Bryana começa a receber sinais de que seu tempo de vida e
             let inicioJornada = InicioJornada()
             
             if escolhaArmadura == "1" {
-                escritaConsole.printaEscrita("- \(nomeJogador): Obrigado meu irmão!")
+                usaConsole.printaEscrita("- \(nomeJogador): Obrigado meu irmão!")
                 if jogador.inventario.verificaItem(nome: "Armadura de Prata") != nil {
                     print("")
                 } else {
@@ -106,7 +78,7 @@ Ao completar 17 anos, Bryana começa a receber sinais de que seu tempo de vida e
                 jogador.inventario.mostrarInventario(vetor: jogador.inventario.meuInventario)
                 inicioJornada.inicioJornada()
             } else if escolhaArmadura == "2" {
-                escritaConsole.printaEscrita("- \(nomeJogador): Acho que não vou precisar Solveig, mas agradeço sua preocupação!")
+                usaConsole.printaEscrita("- \(nomeJogador): Acho que não vou precisar Solveig, mas agradeço sua preocupação!")
                 inicioJornada.inicioJornada()
             } else {
                 print("Escolha uma opção válida.")

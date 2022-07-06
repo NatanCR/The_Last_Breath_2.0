@@ -12,7 +12,7 @@ class BatalhaFinal1 {
     public func batalhaFinal1() {
         let grannus = Grannus(ataqueRevidus: "REVIDUS", nome: "Grannus", vida: 100)
         
-        escritaConsole.printaEscrita("""
+        usaConsole.printaEscrita("""
 
 - \(nomeJogador): Certo! AAAARRRGG TOME ISSO!!!!!!!
 
@@ -26,23 +26,10 @@ class BatalhaFinal1 {
 - Doodou: Muito bem \(nomeJogador)!! Use sua espada agora!!!!
 
 """)
-        var escolhaAtaque: String
+        let escolhaAtaque = usaConsole.repeatWhile(fala: "- \(nomeJogador): [1] Atacar com a espada. ou [2] Esperar o ataque de Grannus.", opcao1: "- \(nomeJogador): AAAAHHH SEGURA ESSA!!!!!!!", opcao2: "- \(nomeJogador): Espera aí, cadê ele?")
         
-        repeat {
-            print("- \(nomeJogador): [1] Atacar com a espada. ou [2] Esperar o ataque de Grannus.")
-            escolhaAtaque = readLine()!
-            
-            if escolhaAtaque == "1" {
-                escritaConsole.printaEscrita("- \(nomeJogador): AAAAHHH SEGURA ESSA!!!!!!!")
-            } else if escolhaAtaque == "2" {
-                escritaConsole.printaEscrita("- \(nomeJogador): Espera aí, cadê ele?")
-            } else {
-                print("Digite uma opção válida.")
-            }
-        } while escolhaAtaque != "1" && escolhaAtaque != "2"
-                    
-                    
-        escritaConsole.printaEscrita("""
+        usaConsole.printaEscrita("""
+\(escolhaAtaque)
 
 - \(nomeJogador): Não consigo ver nada com essa fumaça!!!!!
 
@@ -51,10 +38,10 @@ class BatalhaFinal1 {
 - Grannus: CRUENTOS PASSOS
 
 """)
-                    
-                    jogador.vida -= 30
-                    
-        escritaConsole.printaEscrita("""
+        
+        jogador.vida -= 30
+        
+        usaConsole.printaEscrita("""
 
 Vida \(nomeJogador): \(jogador.vida)
 
@@ -69,29 +56,17 @@ Vida \(nomeJogador): \(jogador.vida)
 - \(nomeJogador): Essa armadura realmente foi útil!! Agora é minha vez!!!!
 
 """)
-                    var escolhaFala1: String
-                    repeat {
-            print("- \(nomeJogador): [1] Você devia se arrepender enquanto pode! ou [2] Eu não vou errar dessa vez!")
-            escolhaFala1 = readLine()!
-            
-            if escolhaFala1 == "1" {
-                escritaConsole.printaEscrita("\(nomeJogador): Você devia se arrepender enquanto pode!")
-            }else if escolhaFala1 == "2" {
-                escritaConsole.printaEscrita("\(nomeJogador): Eu não vou errar dessa vez!")
-            } else {
-                print("Escolha uma opção válida.")
-            }
-        } while escolhaFala1 != "1" && escolhaFala1 != "2"
-                    
-                    
-        escritaConsole.printaEscrita("""
+        let fala1 = usaConsole.repeatWhile(fala: "- \(nomeJogador): [1] Você devia se arrepender enquanto pode! ou [2] Eu não vou errar dessa vez!", opcao1: "- \(nomeJogador): Você devia se arrepender enquanto pode!", opcao2: "- \(nomeJogador): Eu não vou errar dessa vez!")
+        
+        usaConsole.printaEscrita("""
+\(fala1)
 
 - Grannus: AAAAHHHH TIRA ISSO DE MIM!! EU NÃO AGUENTO MAIS!!!!!
 
 """)
-                    grannus.vida -= 15
-                    
-        escritaConsole.printaEscrita("""
+        grannus.vida -= 15
+        
+        usaConsole.printaEscrita("""
 Vida Grannus: \(grannus.vida)
 
 - \(nomeJogador): O que foi isso? Como o olho dele mudou de cor?
@@ -103,43 +78,32 @@ Pode ser o feitiço que o irmão do seu pai usou para possuir o corpo de Grannus
 Precisamos ajudá-lo, ele está sofrendo!!
 
 """)
-                    
-                    var escolhaFala2: String
-                    
-                    repeat {
-            print("- \(nomeJogador): [1] AAAAH EU VOU ACABAR COM A VIDA DELE!!!!!! ou [2] Como vamos ajudá-lo?")
-            escolhaFala2 = readLine()!
-            if escolhaFala2 == "1" {
-                escritaConsole.printaEscrita("""
+        
+        let fala2 = usaConsole.repeatWhile(fala: "- \(nomeJogador): [1] AAAAH EU VOU ACABAR COM A VIDA DELE!!!!!! ou [2] Como vamos ajudá-lo?", opcao1: """
 
 - Doodou: Se você matar ele, pode ser que nunca descobriremos a cura para sua irmã!
 
 - \(nomeJogador): Você tem razão, precisamos dele vivo! Você tem algum plano?
-""")
-            }else if escolhaFala2 == "2" {
-                print("")
-            }else {
-                print("Escolha uma opção válida.")
-            }
-        } while escolhaFala2 != "1" && escolhaFala2 != "2"
-                    
-        escritaConsole.printaEscrita("""
+""", opcao2: "")
+        
+        usaConsole.printaEscrita("""
+\(fala2)
 
 - Doodou: Eu tenho um plano, mas pode ser perigoso! SE AFASTE!
 
 - Doodou: Distraia ele \(nomeJogador), vou tentar usar algo pelas costas dele!
 
 """)
-                    var escolhaErrada: String
-                    
-                    repeat {
+        var escolhaErrada: String
+        
+        repeat {
             print("- \(nomeJogador): [1] Distrair Grannus ou [2] Atacar Grannus")
             escolhaErrada = readLine()!
             if escolhaErrada == "1" {
                 print("")
             } else if escolhaErrada == "2" {
                 grannus.vida -= 15
-                escritaConsole.printaEscrita("""
+                usaConsole.printaEscrita("""
 
 Vida Grannus: \(grannus.vida)
 
@@ -161,8 +125,8 @@ Você fez a escolha errada mas terá sua última chance.
                 print("Digite uma opção válida.")
             }
         } while escolhaErrada != "1" && escolhaErrada != "2"
-               
-        escritaConsole.printaEscrita("""
+        
+        usaConsole.printaEscrita("""
 - Doodou: AGORA!!! \(nomeJogador) você vai precisa me ajudar!
 
 - Doodou: CORPUUUSS RETIREEEE!!!!
@@ -170,30 +134,19 @@ Você fez a escolha errada mas terá sua última chance.
 - Grannus: AAAAAAAAAHHH!!!!
 
 """)
-                    grannus.vida = 50
-                    grannus.vida -= 40
-                    
-        escritaConsole.printaEscrita("""
+        grannus.vida = 50
+        grannus.vida -= 40
+        
+        usaConsole.printaEscrita("""
 Vida Grannus: \(grannus.vida)
 
 - Doodou: Muito bem \(nomeJogador)! Agora, segure ele até o feitiço fazer efeito!
 
 """)
-                    var escolhaFala3: String
-                    repeat {
-            print("- \(nomeJogador): [1] Doodou, isso vai dar certo? ou [2] Ele pode morrer?")
-            escolhaFala3 = readLine()!
-            
-            if escolhaFala3 == "1" {
-                escritaConsole.printaEscrita("\(nomeJogador): Doodou, isso vai dar certo?")
-            }else if escolhaFala3 == "2" {
-                escritaConsole.printaEscrita("\(nomeJogador): Ele pode morrer?")
-            } else {
-                print("Escolha uma opção válida.")
-            }
-        } while escolhaFala3 != "1" && escolhaFala3 != "2"
-                    
-        escritaConsole.printaEscrita("""
+        let fala3 = usaConsole.repeatWhile(fala: "- \(nomeJogador): [1] Doodou, isso vai dar certo? ou [2] Ele pode morrer?", opcao1: "- \(nomeJogador): Doodou, isso vai dar certo?", opcao2: "- \(nomeJogador): Ele pode morrer?")
+        
+        usaConsole.printaEscrita("""
+\(fala3)
 
 - Doodou: Eu espero que dê certo e que ele não morra!!
 
@@ -218,22 +171,12 @@ Vida Grannus: \(grannus.vida)
 - Doodou: Olha cara... temos muito pra te contar.
 
 """)
-                    
-                    var escolhaFala4: String
-                    repeat {
-            print("- \(nomeJogador): [1] Vamos te contar tudo que precisa saber! ou [2] Você realmente não se lembra de nada?")
-            escolhaFala4 = readLine()!
-            
-            if escolhaFala4 == "1" {
-                escritaConsole.printaEscrita("\n- \(nomeJogador): Vamos te contar tudo que precisa saber!")
-            }else if escolhaFala4 == "2" {
-                escritaConsole.printaEscrita("\n- \(nomeJogador): Você realmente não se lembra de nada?")
-            } else {
-                print("\nEscolha uma opção válida.")
-            }
-        } while escolhaFala4 != "1" && escolhaFala4 != "2"
-                    
-        escritaConsole.printaEscrita("""
+        
+        let usaConsole = Console()
+        let fala4 = usaConsole.repeatWhile(fala: "- \(nomeJogador): [1] Vamos te contar tudo que precisa saber! ou [2] Você realmente não se lembra de nada?", opcao1: "\n- \(nomeJogador): Vamos te contar tudo que precisa saber!", opcao2: "\n- \(nomeJogador): Você realmente não se lembra de nada?")
+        
+        usaConsole.printaEscrita("""
+\(fala4)
 
 - Grannus: Eu me lembro de que... me lembro que salvamos a cidade e derrotamos o Centrion! O que aconteceu depois?
 
@@ -244,29 +187,18 @@ Vida Grannus: \(grannus.vida)
 - Grannus: Vocês ainda não me disseram o que estamos fazendo aqui!
 
 """)
-                    var escolhaContar: String
-                    repeat {
-            print("- \(nomeJogador): [1] Amarrar Grannus e levá-lo embora. ou [2] Dizer o que ele precisa saber.")
-            escolhaContar = readLine()!
-            
-            if escolhaContar == "1" {
-                escritaConsole.printaEscrita("\n\(nomeJogador): Já disse que contaremos no caminho, agora me deixe te amarrar!")
-            }else if escolhaContar == "2" {
-                escritaConsole.printaEscrita("""
+        let escolhaContar = usaConsole.repeatWhile(fala: "- \(nomeJogador): [1] Amarrar Grannus e levá-lo embora. ou [2] Dizer o que ele precisa saber.", opcao1: "\n- \(nomeJogador): Já disse que contaremos no caminho, agora me deixe te amarrar!", opcao2: """
 
-\n\(nomeJogador): Doodou: EI EI não conte nada a ele agora, contamos no caminho ande logo!!!
+- Doodou: EI EI não conte nada a ele agora, contamos no caminho ande logo!!!
 
 - \(nomeJogador): Você tem razão, nosso tempo está acabando!
 
 - Grannus: Tempo? Do que vocês estão falando?
 
 """)
-            } else {
-                print("\nEscolha uma opção válida.")
-            }
-        } while escolhaContar != "1" && escolhaContar != "2"
-                  
-        escritaConsole.printaEscrita("""
+        
+        usaConsole.printaEscrita("""
+\(escolhaContar)
 
 - Doodou: \(nomeJogador) vou chamar nosso amigo, se prepare e explique a ele o que precisamos fazer!
 
@@ -276,15 +208,15 @@ Vida Grannus: \(grannus.vida)
 
 
 """)
-                    jogador.inventario.mostrarInventario(vetor: jogador.inventario.meuInventario)
-                    
-                    var escolhaMapa: String
-                    repeat {
+        jogador.inventario.mostrarInventario(vetor: jogador.inventario.meuInventario)
+        
+        var escolhaMapa: String
+        repeat {
             print("\n\nEscolha o item: ")
             escolhaMapa = readLine()!
             
             if escolhaMapa == "Mapa" || escolhaMapa == "mapa" {
-                escritaConsole.printaSimbolos("""
+                usaConsole.printaSimbolos("""
 
 ███╗░░░███╗░█████╗░██████╗░░█████╗░
 ████╗░████║██╔══██╗██╔══██╗██╔══██╗
@@ -298,8 +230,8 @@ Vida Grannus: \(grannus.vida)
                 print("\nEscolha uma opção válida.")
             }
         } while escolhaMapa != "Mapa" && escolhaMapa != "mapa"
-         
-                    let finalJogo = FinalJogo()
-                    finalJogo.finalJogo()
+        
+        let finalJogo = FinalJogo()
+        finalJogo.finalJogo()
     }
 }

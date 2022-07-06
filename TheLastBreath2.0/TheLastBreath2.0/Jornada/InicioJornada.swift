@@ -10,7 +10,7 @@ import Foundation
 class InicioJornada {
     
     func inicioJornada() {
-        escritaConsole.printaEscrita("""
+        usaConsole.printaEscrita("""
 
 No mesmo dia \(nomeJogador) e o duende Doodou partem em uma jornada contra o tempo para que pudessem achar um jeito de salvar Bryana.
 
@@ -23,7 +23,7 @@ No mesmo dia \(nomeJogador) e o duende Doodou partem em uma jornada contra o tem
             jogador.inventario.adicionarObjetos()
         }
         jogador.inventario.mostrarInventario(vetor: jogador.inventario.meuInventario)
-        escritaConsole.printaEscrita("""
+        usaConsole.printaEscrita("""
 
 - Doodou: Certo meu rapaz, você sabe o que encontraremos ao norte até chegarmos no nosso destino, não sabe? Existem animais mágicos que vivem no caminho até a Montanha de Elso.
 
@@ -58,9 +58,9 @@ No mesmo dia \(nomeJogador) e o duende Doodou partem em uma jornada contra o tem
         } while perguntaHipogrifo != "1" && perguntaHipogrifo != "2"
         
         
-       
         
-        escritaConsole.printaEscrita("""
+        
+        usaConsole.printaEscrita("""
 
 - \(nomeJogador): Eiiii Doodou, estou vendo a montanha!!!
 
@@ -95,17 +95,21 @@ No mesmo dia \(nomeJogador) e o duende Doodou partem em uma jornada contra o tem
             }
         } while escolha2 != "1" && escolha2 != "2"
         
-        escritaConsole.printaEscrita("""
+        usaConsole.printaEscrita("""
 
 - Doodou: \(nomeJogador) o Hipogrifo está mais calmo? Acho que tive uma ideia!
 
 - \(nomeJogador): Acho que sei o que está pensando...
 
-- \(nomeJogador): [1] Usar o Hipogrifo para ir até o topo da montanha.
 """)
-        var escolhaHipogrifo: String = readLine()!
+        var escolhaHipogrifo: String
         
-        escritaConsole.printaEscrita("""
+        repeat{
+            print("- \(nomeJogador): [1] Usar o Hipogrifo para ir até o topo da montanha.")
+            escolhaHipogrifo = readLine()!
+        } while escolhaHipogrifo != "1"
+        
+        usaConsole.printaEscrita("""
 
 - Doodou: Isso \(nomeJogador) era exatamente o que eu estava pensando!
 
@@ -120,23 +124,21 @@ No mesmo dia \(nomeJogador) e o duende Doodou partem em uma jornada contra o tem
 - Doodou: Olha!!! Estou vendo o Castelo de Grannus no topo, estamos chegando.
 
 """)
+        
+        let escolhaCastelo = usaConsole.repeatWhile(fala: "- \(nomeJogador): [1] Vamos garoto, deixe a gente na frente do castelo! ou [2] Melhor descermos mais afastados, não sabemos o que nos espera.", opcao1: """
 
-        var escolhaCastelo: String
+- \(nomeJogador): Vamos garoto, deixe a gente na frente do castelo!
+
+- Doodou: Grannus vai ver a gente se formos bem na frente do castelo não acha? Está querendo morrer hoje? Porque eu não!!
+""", opcao2: """
+
+- \(nomeJogador): Melhor descermos mais afastados, não sabemos o que nos espera.
+
+- Doodou: Você tem razão precisamos descer mais afastados e voltar andando
+""")
         
-        repeat {
-            print("- \(nomeJogador): [1] Vamos garoto, deixe a gente na frente do castelo! ou [2] Melhor descermos mais afastados, não sabemos o que nos espera.")
-            escolhaCastelo = readLine()!
-            if escolhaCastelo == "1" {
-                escritaConsole.printaEscrita("\n- Doodou: Grannus vai ver a gente se formos bem na frente do castelo não acha? Está querendo morrer hoje? Porque eu não!!")
-            } else if escolhaCastelo == "2" {
-                escritaConsole.printaEscrita("\n- Doodou: Você tem razão precisamos descer mais afastados e voltar andando")
-            } else {
-                print("Digite uma opção válida.")
-            }
-        } while escolhaCastelo != "1" && escolhaCastelo != "2"
-        
-        
-        escritaConsole.printaEscrita("""
+        usaConsole.printaEscrita("""
+\(escolhaCastelo)
 
 - \(nomeJogador): Ótimo garoto, agora você está livre! Obrigado por nos ajudar!
 
@@ -151,11 +153,11 @@ Após uma pequena viagem até encontrarem um Hipogrifo \(nomeJogador) e seu duen
     }
     
     func pegarEspada() {
-        escritaConsole.printaEscrita("\nVocê irritou o Hipogrifo, prepare-se para lutar!\n")
+        usaConsole.printaEscrita("\nVocê irritou o Hipogrifo, prepare-se para lutar!\n")
         
         jogador.inventario.mostrarInventario(vetor: jogador.inventario.meuInventario)
         
-        escritaConsole.printaEscrita("""
+        usaConsole.printaEscrita("""
 
 
 - Hiprogrífo: GRRRUUUUUUWW!!!!!!
@@ -169,7 +171,7 @@ Após uma pequena viagem até encontrarem um Hipogrifo \(nomeJogador) e seu duen
     }
     
     func fazerReverencia() {
-        escritaConsole.printaEscrita("""
+        usaConsole.printaEscrita("""
 
 - Doodou: Bom garoto, fique tranquilo! Ele está apenas te analisando... mantenha-se calmo!
 
@@ -193,7 +195,7 @@ Após uma pequena viagem até encontrarem um Hipogrifo \(nomeJogador) e seu duen
             segredoCorrente = readLine()!
         } while segredoCorrente != "1"
         
-        escritaConsole.printaEscrita("""
+        usaConsole.printaEscrita("""
 
 - Doodou: Ei, espera aí! Acabei de lembrar que tenho algo aqui na mochila que vai resolver isso!!
 
@@ -209,7 +211,7 @@ Após uma pequena viagem até encontrarem um Hipogrifo \(nomeJogador) e seu duen
     }
     
     func hipogrifo() {
-        escritaConsole.printaEscrita("""
+        usaConsole.printaEscrita("""
 
 - Doodou: Hipogrifos são criaturas mágicas que prezam o respeito e a única forma de evitar um ataque mortal desse animal, é mostrando que você tem boas intenções realizando uma reverência. Se o hipogrifo retribuir, é sinal de que você está seguro. Se não... bom você já pode imaginar!
 

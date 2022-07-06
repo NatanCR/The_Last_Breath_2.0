@@ -27,6 +27,22 @@ class Console {
         }
         print("")
     }
+    
+    func repeatWhile(fala: String, opcao1: String, opcao2: String) -> String {
+        var escolha: String
+        var retorno: String = ""
+        repeat {
+            print("\(fala)")
+            escolha = readLine()!
+            if escolha == "1" {
+                retorno = opcao1
+            } else if escolha == "2" {
+                retorno = opcao2
+            }
+        } while escolha != "1" && escolha != "2"
+        
+        return retorno
+    }
 }
 
 

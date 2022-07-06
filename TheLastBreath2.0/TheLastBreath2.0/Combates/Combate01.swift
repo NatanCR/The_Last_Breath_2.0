@@ -36,12 +36,12 @@ class Combate01 {
         } while escolhaAtaque != "1" && escolhaAtaque != "2"
         
         
-        escritaConsole.printaEscrita("\n\n- Grannus: MESTRE!! Lembra daquele feitiço que você me ensinou?")
+        usaConsole.printaEscrita("\n\n- Grannus: MESTRE!! Lembra daquele feitiço que você me ensinou?")
         print("\n- Centrion: \(centrion.ataqueRevidus)")
         mestreDosMagos.vida -= centrion.ataqueRevidus(atacar: true)
         print("\nVida Mestre dos Magos: \(mestreDosMagos.vida)")
         
-        escritaConsole.printaEscrita("\n\n- Mestre dos magos: Você tem certeza que isso vai funcionar? Irei confiar nos seus sentidos, meu jovem aprendiz!")
+        usaConsole.printaEscrita("\n\n- Mestre dos magos: Você tem certeza que isso vai funcionar? Irei confiar nos seus sentidos, meu jovem aprendiz!")
         
         print("\n\nPersonagem: \(mestreDosMagos.nome)")
         print("Ataques: \n[1]\(mestreDosMagos.ataqueTenebris)\n[2]\(mestreDosMagos.ataqueVingarceri)")
@@ -62,6 +62,6 @@ class Combate01 {
             }
         } while escolhaAtaque != "1" && escolhaAtaque != "2"
         
-        escritaConsole.printaEscrita("\nO tempo se fecha, nuvens escuras se formam em cima dos magos e o poder do feitiço caí sobre Centrion, o inimigo mesmo derrotado ainda não desistiu da luta e deseja vingança…")
+        usaConsole.printaEscrita("\nO tempo se fecha, nuvens escuras se formam em cima dos magos e o poder do feitiço caí sobre Centrion, o inimigo mesmo derrotado ainda não desistiu da luta e deseja vingança…")
     }
 }

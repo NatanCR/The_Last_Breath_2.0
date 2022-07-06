@@ -10,7 +10,7 @@ import Foundation
 class FinalJogo {
     
     func finalJogo() {
-        escritaConsole.printaEscrita("""
+        usaConsole.printaEscrita("""
 
 - \(nomeJogador): Grannus vamos embora num Hipogrifo, ele é nosso amigo mas por via das dúvidas faça a reverência precisamos de você vivo!
 
@@ -42,34 +42,17 @@ Enquanto o forte Hipogrifo leva-os para casa, Doodou e \(nomeJogador) contam tud
 
 """)
         
-        var escolhaFala1: String
-        repeat {
-            print("- \(nomeJogador): [1] Você vai poder se desculpar quando salvar a minha irmã! ou [2] Se não salvarmos ela hoje, ela morrerá à meia noite.")
-            escolhaFala1 = readLine()!
-            
-            if escolhaFala1 == "1" {
-                escritaConsole.printaEscrita("\n\(nomeJogador): Você vai poder se desculpar quando salvar a minha irmã!")
-            }else if escolhaFala1 == "2" {
-                escritaConsole.printaEscrita("\n\(nomeJogador): Se não salvarmos ela hoje, ela morrerá à meia noite.")
-            } else {
-                print("\nEscolha uma opção válida.")
-            }
-        } while escolhaFala1 != "1" && escolhaFala1 != "2"
+        let fala1 = usaConsole.repeatWhile(fala: "- \(nomeJogador): [1] Você vai poder se desculpar quando salvar a minha irmã! ou [2] Se não salvarmos ela hoje, ela morrerá à meia noite.", opcao1: "\n- \(nomeJogador): Você vai poder se desculpar quando salvar a minha irmã!", opcao2: "\n- \(nomeJogador): Se não salvarmos ela hoje, ela morrerá à meia noite.")
         
-        escritaConsole.printaEscrita("""
+        usaConsole.printaEscrita("""
+\(fala1)
 
 - Doodou: Já estou vendo a casa, vamos lá garoto mais rápido!
 
 - Doodou: Chegamos! Estamos em casa!
 
 """)
-        var escolhaFala2: String
-        repeat {
-            print("[1] Chamar Solveing ou [2] Entrar na casa")
-            escolhaFala2 = readLine()!
-            
-            if escolhaFala2 == "1" {
-                escritaConsole.printaEscrita("""
+        let fala2 = usaConsole.repeatWhile(fala: "[1] Chamar Solveing ou [2] Entrar na casa", opcao1: """
 
 - \(nomeJogador): Solveing chegamos!! Está em casa?
 
@@ -77,9 +60,7 @@ Enquanto o forte Hipogrifo leva-os para casa, Doodou e \(nomeJogador) contam tud
 
 - \(nomeJogador): Estamos aqui meu querido irmão e trago boas notícias!
 
-""")
-            }else if escolhaFala2 == "2" {
-                escritaConsole.printaEscrita("""
+""", opcao2: """
 
 - \(nomeJogador): Está tudo muito calmo, vamos entrar! Hipogrifo, agora você está livre, adeus meu amigo, obrigado por tudo! Vamos Grannus...
 
@@ -92,12 +73,9 @@ Graças a Merlim vocês voltaram!!
 - \(nomeJogador): Estamos aqui meu querido irmão e trago boas notícias!
 
 """)
-            } else {
-                print("\nEscolha uma opção válida.")
-            }
-        } while escolhaFala2 != "1" && escolhaFala2 != "2"
         
-        escritaConsole.printaEscrita("""
+        usaConsole.printaEscrita("""
+\(fala2)
 
 - Solveing: Vocês conseguiram?
 
@@ -129,7 +107,7 @@ Graças a Merlim vocês voltaram!!
             }
         } while escolhaFala3 != "1"
         
-        escritaConsole.printaEscrita("""
+        usaConsole.printaEscrita("""
 
 - \(nomeJogador): Pode contar, ele veio para nos ajudar!
 
@@ -139,7 +117,7 @@ Graças a Merlim vocês voltaram!!
 
 - Grannus: EU ME SACRIFICO!!!
 
-Depoi3s dessa frase de Grannus, eles se reuniram e decidiram aceitar o desejo de salvar Bryana. Encontram o feitiço mais forte que teria piedade de Grannus e não o machucasse em sua partida, antes de ir Grannus se desculpou com Bryana por tudo que causou a ela e sua família… e então aceitou seu destino com um último suspiro.
+Depois dessa frase de Grannus, eles se reuniram e decidiram aceitar o desejo de salvar Bryana. Encontram o feitiço mais forte que teria piedade de Grannus e não o machucasse em sua partida, antes de ir Grannus se desculpou com Bryana por tudo que causou a ela e sua família… e então aceitou seu destino com um último suspiro.
 
 IN PACE MORIERIS
 

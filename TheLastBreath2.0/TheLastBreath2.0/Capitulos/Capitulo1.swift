@@ -10,13 +10,15 @@ import Foundation
 public class Capitulo1 {
     
     public func capitulo1() {
-        escritaConsole.printaEscrita("""
+        usaConsole.printaEscrita("""
 
 
 
 CAPÍTULO I - A terrível maldição
 
+
 Um homem conhecido como Mestre dos Magos e seu aprendiz Grannus viajam à procura de suprimentos para fabricação de novas poções. Durante essa jornada, ao chegar em uma vila vizinha chamada Aghoo, encontram Centrion, o irmão mais novo do Mestre dos Magos, que foi corrompido por sua fome de poder e conhecimento ao longo dos anos.
+
 
 - Centrion: Ora ora quem está aqui... quanto tempo meu irmão!!
 
@@ -30,7 +32,9 @@ Um homem conhecido como Mestre dos Magos e seu aprendiz Grannus viajam à procur
 
 - Aprendiz (Grannus): Entendido mestre, assim que eu conseguir levar todos em segurança volto para te ajudar! [...] Por aqui crianças, vou levá-las para um lugar seguro!
 
+
 Grannus reúne todos os cidadãos da cidade que estavam perto do local onde os dois magos mais poderosos estavam prontos para iniciar uma batalha até a morte, ele os leva para longe e se apressa para poder ajudar seu mestre o mais rápido possível.
+
 
 - Centrion: Eu precisava de algo para chamar sua atenção! Eu tinha que ter certeza de que você estaria aqui.
 
@@ -54,13 +58,15 @@ Grannus reúne todos os cidadãos da cidade que estavam perto do local onde os d
             }
         } while centrion != "1" && centrion != "2"
         
-        escritaConsole.printaEscrita("""
+        usaConsole.printaEscrita("""
 
 - Mestre dos magos: Centrion você não é páreo para mim!
 
 - Mestre dos magos: Você sabe quem sou e sabe dos meus poderes, mesmo sendo meu irmão não vou permitir que machuque ninguém!
 
+
 Então, uma batalha intensa é travada entre os dois magos poderosos! Uma hora de batalha se passou e muitos danos foram causados no centro de Aghoo e no meio dos destroços uma criança sozinha e indefesa é vista tentando se esconder... O Aprendiz volta para tentar ajudar seu mestre.
+
 
 - Mestre dos magos: GRANNUS leve essa criança daqui!! Eu vou terminar essa luta sozinho! CENTRIONNNNN!!!! Eu devia ter acabado com você no passado, mas não tem problema eu acabo com você agora!!!
 
@@ -70,11 +76,13 @@ Então, uma batalha intensa é travada entre os dois magos poderosos! Uma hora d
         
         combate01.combate01()
         
-        escritaConsole.printaEscrita("""
+        usaConsole.printaEscrita("""
 
 - Centrion: Você venceu aqui meu irmão, mas essa batalha ainda não acabou!!
 
-Então em seu último suspiro de vida, Centrion usou o que lhe restava de magia para lançar um feitiço sobre Grannus, o aprendiz do Mestre dos magos, fazendo com que ele seguisse todas as vontades de Centrion.”
+
+Então em seu último suspiro de vida, Centrion usou o que lhe restava de magia para lançar um feitiço sobre Grannus, o aprendiz do Mestre dos magos, fazendo com que ele seguisse todas as vontades de Centrion.
+
 
 - Centrion: SEQUITUR VESTIIGIA MEA!!!!
 
@@ -86,7 +94,9 @@ Então em seu último suspiro de vida, Centrion usou o que lhe restava de magia 
 
 - Grannus: Acho que estou bem, não se preocupe comigo! Vamos levar essa criança daqui e voltar para casa!
 
+
 Depois de uma dura batalha o Mestre dos magos e seu Aprendiz retornam para casa levando uma criança que perdeu seus pais nos destroços causados em Aghoo.
+
 
 - Grannus: Mestre, o que faremos com essa criança?
 
@@ -97,6 +107,7 @@ Depois de uma dura batalha o Mestre dos magos e seu Aprendiz retornam para casa 
 
 
 - Grannus: Mestre, eu trouxe mais um chá de verdilho pra você, isso tem te ajudado com o sua fraqueza. Por favor beba!
+
 
 Após um ano daquela batalha entre Mestre dos Magos e seu irmão Centrion, Grannus passou a cuidar de seu mestre que ficou muito fraco e não conseguiu se recuperar dos danos que seu irmão lhe causou. Grannus, vendo seu mestre enfraquecido e tentado pelo feitiço jogado por Centrion, aproveita para matá-lo e assim tomar seus poderes.
 
@@ -120,7 +131,7 @@ Após a morte de seu pai, o Mestre dos Magos, Solveig o filho mais velho leva se
             
             switch escolha {
             case "1":
-                escritaConsole.printaEscrita("""
+                usaConsole.printaEscrita("""
 
 - \(nomeJogador): Eu quero proteger nossa vila do homem que matou nosso Pai!! Mas não sei se conseguirei ser bom como você meu irmão.
 
@@ -144,7 +155,7 @@ Durante sua juventude Solveig ensina seus irmãos mais novos a desenvolver habil
     }
     
     private func historiaCentrion() {
-        escritaConsole.printaEscrita("""
+        usaConsole.printaEscrita("""
 
 Há muitos anos atrás, quando Centrion e seu irmão ainda eram jovens eles tinham um único sonho, tornar o mundo mágico em um lugar de paz onde nenhuma criatura seja ela mágica ou não pudesse viver em paz. Mas para isso eles sabiam que seria necessário por fim a prática da magia obscura, e para isso os dois irmãos teriam que aprender tudo sobre magia até mesmo sobre essa magia obscura e perigosa, famosa por corromper aqueles que com ela brincam ou tentam dominar.
 
@@ -173,6 +184,7 @@ Mas tem um preço, essa magia oculta do livro pode corromper e destruir a mente 
 - Centrion: Eu não sei meu irmão, estou tentado a continuar e receber esse poder para cumprir com a promessa que fizemos!
 
 - Mestre dos magos: Irmão, eu sei que fizemos uma promessa mas não precisamos colocar nossas vidas em risco por isso! Não dessa forma!
+
 
 Depois de uma conversa sem fim, Centrion deixa de lado os conselhos do irmão e decide realizar o feitiço que permitiria receber os poderes ocultos do livro para conseguir dominar a magia obscura do mundo. Mas o que ele não acreditava era que os avisos contidos no livro dava era tão fortes quanto a verdade que neles existiam, depois de receber esses poderes Centrion havia mudado, se tornou egoísta e faminto por mais poder deixou seu irmão sozinho em busca de algo que ele jamais conseguiria, pois seus destinos já estavam traçados.
 
