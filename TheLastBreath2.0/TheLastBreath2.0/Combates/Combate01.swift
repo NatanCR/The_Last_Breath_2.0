@@ -9,7 +9,7 @@ import Foundation
 
 class Combate01 {
     
-    let mestreDosMagos = MestreMago(ataqueVingarceri: "VINGARCERI", ataqueTenebris: "TENEBRIS MORTIS", nome: "Mestre dos Magos", vida: 100)
+    let mestreDosMagos = MestreMago(ataqueVingarceri: "VINGARCERI - (traz a vingança dos movimentos do inimigo)", ataqueTenebris: "TENEBRIS MORTIS - (causa uma morte terrível ao inimgo)", nome: "Mestre dos Magos", vida: 100)
     let centrion = Centrion(ataqueRevidus: "REVIDUS", nome: "Centrion", vida: 100)
     
     func combate01() {

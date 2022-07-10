@@ -82,18 +82,25 @@ No mesmo dia \(nomeJogador) e o duende Doodou partem em uma jornada contra o tem
 
 """)
         var escolha2: String
+        var retornoEspada = false
         repeat{
             print("[1] Ajoelhar-se e fazer a reverência ou [2] Pegar a espada")
             escolha2 = readLine()!
             
-            if escolha2 == "2" {
-                pegarEspada()
-            } else if escolha2 == "1"{
+            if escolha2 == "1" {
                 fazerReverencia()
+            } else if escolha2 == "2"{
+                retornoEspada = pegarEspada()
             } else {
                 print("Digite uma opção válida.")
             }
         } while escolha2 != "1" && escolha2 != "2"
+        
+        if retornoEspada{
+            return
+        }
+        
+        print(" ")
         
         usaConsole.printaEscrita("""
 
@@ -152,7 +159,9 @@ Após uma pequena viagem até encontrarem um Hipogrifo \(nomeJogador) e seu duen
         finalJornada.finalJornada()
     }
     
-    func pegarEspada() {
+    func pegarEspada() -> Bool {
+        var retornoBatalha: Bool
+        
         usaConsole.printaEscrita("\nVocê irritou o Hipogrifo, prepare-se para lutar!\n")
         
         jogador.inventario.mostrarInventario(vetor: jogador.inventario.meuInventario)
@@ -166,8 +175,9 @@ Após uma pequena viagem até encontrarem um Hipogrifo \(nomeJogador) e seu duen
 
 """)
         let combate02 = Combate02()
-        combate02.combate02()
+        retornoBatalha = combate02.combate02()
         
+        return retornoBatalha 
     }
     
     func fazerReverencia() {

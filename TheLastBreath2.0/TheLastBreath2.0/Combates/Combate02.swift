@@ -10,7 +10,9 @@ import Foundation
 class Combate02 {
     let hipogrifo = Hipogrifo(nome: "Hipogrifo", vida: 100)
     
-    func combate02() {
+    func combate02() -> Bool {
+        var retornoAtaque = false
+        
         print("\n\nPersonagem: \(jogador.nome)")
         print("Ataques: \n[1] Corte com espada\n[2] Feitiço retardatário\n[3] Defender")
         print("Vida: \(jogador.vida)")
@@ -22,18 +24,24 @@ class Combate02 {
             
             switch escolhaAtaque {
             case "1":
-                ataqueEspada()
+                retornoAtaque = ataqueEspada()
+                return retornoAtaque
             case "2":
-                feiticoDoodou()
+                retornoAtaque = feiticoDoodou()
+                return retornoAtaque
             case "3":
-                return
+                return false
             default:
                 print("Digite uma opção válida.")
             }
         } while escolhaAtaque != "1" && escolhaAtaque != "2"
+        
+        return retornoAtaque
     }
     
-    func feiticoDoodou() {
+    func feiticoDoodou() -> Bool {
+        var resultadoBatalha = false
+        
         usaConsole.printaEscrita("""
 
 - \(nomeJogador): AHHH TOME ISSO SEU MONSTRO!!!
@@ -63,21 +71,21 @@ class Combate02 {
                 print("\nVida Hipogrifo: \(hipogrifo.vida)")
                 print("\n- Hipogrifo: Ataque de bicada!")
                 jogador.vida -= hipogrifo.ataqueBicada(atacar: true)
-                print("Vida \(nomeJogador): \(jogador.vida)")
+                print("\nVida \(nomeJogador): \(jogador.vida)")
             case "2":
                 print("Feitiço retardatário!!")
                 hipogrifo.vida -= jogador.ataqueFeitico(atacar: true)
                 print("\nVida Hipogrifo: \(hipogrifo.vida)")
                 print("\n- Hipogrifo: Ataque de bicada!")
                 jogador.vida -= hipogrifo.ataqueBicada(atacar: true)
-                print("Vida \(nomeJogador): \(jogador.vida)")
+                print("\nVida \(nomeJogador): \(jogador.vida)")
             case "3":
                 print("Defender!!")
                 jogador.vida -= jogador.defesa(defender: true)
                 print("\nVida Hipogrifo: \(hipogrifo.vida)")
                 print("\n- Hipogrifo: Ataque de bicada!")
                 jogador.vida -= hipogrifo.ataqueBicada(atacar: true)
-                print("Vida \(nomeJogador): \(jogador.vida)")
+                print("\nVida \(nomeJogador): \(jogador.vida)")
             default:
                 print("Escolha uma opção válida!")
             }
@@ -99,22 +107,24 @@ Você perdeu todos os seus pontos de vida! Na próxima pense melhor antes de ata
             print("\n[1] Mudar escolha\n[2] Ir para menu")
             escolhaFinal = readLine()!
             if escolhaFinal == "1" {
-                let mudarEscolha = InicioJornada()
                 jogador.vida = 100
-                mudarEscolha.fazerReverencia()
+                resultadoBatalha = false
+                return resultadoBatalha
             } else if escolhaFinal == "2" {
-                let menu = Menu()
-                menu.menuJogo()
-                break
+                resultadoBatalha = true
+                return resultadoBatalha
             } else {
                 print("Escolha uma opção válida!")
             }
         } while escolhaFinal != "1" && escolhaFinal != "2"
         
+        return resultadoBatalha
     }
     
     
-    func ataqueEspada() {
+    func ataqueEspada() -> Bool {
+        var resultadoBatalha = false
+        
         usaConsole.printaEscrita("""
 
 - \(nomeJogador): AHHH TOME ISSO SEU MONSTRO!!!
@@ -168,7 +178,7 @@ Você perdeu todos os seus pontos de vida! Na próxima pense melhor antes de ata
                 print("\nVida Hipogrifo: \(hipogrifo.vida)")
                 print("\n- Hipogrifo: Ataque de bicada!")
                 jogador.vida -= hipogrifo.ataquePatas(atacar: true)
-                print("Vida \(nomeJogador): \(jogador.vida)")
+                print("\nVida \(nomeJogador): \(jogador.vida)")
             default:
                 print("Escolha uma opção válida!")
             }
@@ -190,17 +200,17 @@ Você matou o Hipogrifo, meus parabéns mas levou muito tempo para subir a monta
             print("\n[1] Mudar escolha\n[2] Ir para menu")
             escolhaFinal = readLine()!
             if escolhaFinal == "1" {
-                let mudarEscolha = InicioJornada()
                 jogador.vida = 100
-                mudarEscolha.fazerReverencia()
+                resultadoBatalha = false
+                return resultadoBatalha
             } else if escolhaFinal == "2" {
-                let menu = Menu()
-                menu.menuJogo()
-                break
+                resultadoBatalha = true
+                return resultadoBatalha
             } else {
                 print("Escolha uma opção válida!")
             }
         } while escolhaFinal != "1" && escolhaFinal != "2"
         
+        return resultadoBatalha
     }
 }
