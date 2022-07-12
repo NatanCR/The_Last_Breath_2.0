@@ -8,10 +8,11 @@
 import Foundation
 
 class Combate02 {
-    let hipogrifo = Hipogrifo(nome: "Hipogrifo", vida: 100)
+    let hipogrifo = Hipogrifo(nome: "Hipogrifo", vida: 100, nomeAtaque01: "Ataque de bicada!", nomeAtaque02: "Ataque com asas!", nomeAtaque03: "Ataque com patas!")
     
     func combate02() -> Bool {
         var retornoAtaque = false
+        jogador.vida = 100
         
         print("\n\nPersonagem: \(jogador.nome)")
         print("Ataques: \n[1] Corte com espada\n[2] Feitiço retardatário\n[3] Defender")
@@ -49,12 +50,12 @@ class Combate02 {
 - Hipogrifo: IIAAAARRRRGGGHHH
 
 """)
-        hipogrifo.vida -= jogador.ataqueFeitico(atacar: true)
+        hipogrifo.vida -= jogador.ataque(dano: 30, atacar: true)
         print("\nVida Hipogrifo: \(hipogrifo.vida)")
         
         usaConsole.printaEscrita("\n- \(nomeJogador): OWWW droga ele está furioso! Doodou me ajudeeee!!")
-        print("\n- Hipogrifo: Ataque de bicada!")
-        jogador.vida -= hipogrifo.ataqueBicada(atacar: true)
+        print("\n- Hipogrifo: \(hipogrifo.nomeAtaque01)")
+        jogador.vida -= hipogrifo.ataque(dano: 50, atacar: true)
         print("\nVida \(nomeJogador): \(jogador.vida)")
         
         var escolheAtaque: String
@@ -66,25 +67,25 @@ class Combate02 {
             
             switch escolheAtaque {
             case "1":
-                print("Corte com espada!!")
-                hipogrifo.vida -= jogador.ataqueEspada(atacar: true)
+                print(jogador.nomeAtaque01)
+                hipogrifo.vida -= jogador.ataque(dano: 40, atacar: true)
                 print("\nVida Hipogrifo: \(hipogrifo.vida)")
-                print("\n- Hipogrifo: Ataque de bicada!")
-                jogador.vida -= hipogrifo.ataqueBicada(atacar: true)
+                print("\n- Hipogrifo: \(hipogrifo.nomeAtaque01)")
+                jogador.vida -= hipogrifo.ataque(dano: 50, atacar: true)
                 print("\nVida \(nomeJogador): \(jogador.vida)")
             case "2":
-                print("Feitiço retardatário!!")
-                hipogrifo.vida -= jogador.ataqueFeitico(atacar: true)
+                print(jogador.nomeAtaque02)
+                hipogrifo.vida -= jogador.ataque(dano: 30, atacar: true)
                 print("\nVida Hipogrifo: \(hipogrifo.vida)")
-                print("\n- Hipogrifo: Ataque de bicada!")
-                jogador.vida -= hipogrifo.ataqueBicada(atacar: true)
+                print("\n- Hipogrifo: \(hipogrifo.nomeAtaque01)")
+                jogador.vida -= hipogrifo.ataque(dano: 50, atacar: true)
                 print("\nVida \(nomeJogador): \(jogador.vida)")
             case "3":
-                print("Defender!!")
-                jogador.vida -= jogador.defesa(defender: true)
+                print(jogador.nomeAtaque03)
+                jogador.vida -= jogador.ataque(dano: 10, atacar: true)
                 print("\nVida Hipogrifo: \(hipogrifo.vida)")
-                print("\n- Hipogrifo: Ataque de bicada!")
-                jogador.vida -= hipogrifo.ataqueBicada(atacar: true)
+                print("\n- Hipogrifo: \(hipogrifo.nomeAtaque01)")
+                jogador.vida -= hipogrifo.ataque(dano: 50, atacar: true)
                 print("\nVida \(nomeJogador): \(jogador.vida)")
             default:
                 print("Escolha uma opção válida!")
@@ -133,12 +134,12 @@ Você perdeu todos os seus pontos de vida! Na próxima pense melhor antes de ata
 
 """)
         
-        hipogrifo.vida -= jogador.ataqueEspada(atacar: true)
+        hipogrifo.vida -= jogador.ataque(dano: 40, atacar: true)
         print("\nVida Hipogrifo: \(hipogrifo.vida)")
         
         usaConsole.printaEscrita("\n- \(nomeJogador): OWWW droga ele está furioso! Doodou me ajudeeee!!")
-        print("\n- Hipogrifo: Ataque de patada!")
-        jogador.vida -= hipogrifo.ataquePatas(atacar: true)
+        print("\n- Hipogrifo: \(hipogrifo.nomeAtaque03)")
+        jogador.vida -= hipogrifo.ataque(dano: 30, atacar: true)
         print("\nVida \(nomeJogador): \(jogador.vida)")
         
         var escolheAtaque: String
@@ -150,34 +151,34 @@ Você perdeu todos os seus pontos de vida! Na próxima pense melhor antes de ata
             
             switch escolheAtaque {
             case "1":
-                print("\nCorte com espada!!")
-                hipogrifo.vida -= jogador.ataqueEspada(atacar: true)
+                print(jogador.nomeAtaque01)
+                hipogrifo.vida -= jogador.ataque(dano: 40, atacar: true)
                 print("\nVida Hipogrifo: \(hipogrifo.vida)")
                 if hipogrifo.vida > 0 {
-                    print("\n- Hipogrifo: Ataque de bicada!")
-                    jogador.vida -= hipogrifo.ataqueAsas(atacar: true)
+                    print("\n- Hipogrifo: \(hipogrifo.nomeAtaque02)")
+                    jogador.vida -= hipogrifo.ataque(dano: 30, atacar: true)
                     print("\nVida \(nomeJogador): \(jogador.vida)")
                 } else {
                     break
                 }
             case "2":
-                print("\nFeitiço retardatário!!")
-                hipogrifo.vida -= jogador.ataqueFeitico(atacar: true)
+                print(jogador.nomeAtaque02)
+                hipogrifo.vida -= jogador.ataque(dano: 30, atacar: true)
                 print("\nVida Hipogrifo: \(hipogrifo.vida)")
                 if hipogrifo.vida > 0 {
-                    print("\n- Hipogrifo: Ataque de bicada!")
-                    jogador.vida -= hipogrifo.ataqueAsas(atacar: true)
+                    print("\n- Hipogrifo: \(hipogrifo.nomeAtaque02)")
+                    jogador.vida -= hipogrifo.ataque(dano: 30, atacar: true)
                     print("\nVida \(nomeJogador): \(jogador.vida)")
                 } else {
                     break
                 }
                 
             case "3":
-                print("\nDefender!!")
-                jogador.vida -= jogador.defesa(defender: true)
+                print(jogador.nomeAtaque03)
+                jogador.vida -= jogador.ataque(dano: 10, atacar: true)
                 print("\nVida Hipogrifo: \(hipogrifo.vida)")
-                print("\n- Hipogrifo: Ataque de bicada!")
-                jogador.vida -= hipogrifo.ataquePatas(atacar: true)
+                print("\n- Hipogrifo: \(hipogrifo.nomeAtaque03)")
+                jogador.vida -= hipogrifo.ataque(dano: 30, atacar: true)
                 print("\nVida \(nomeJogador): \(jogador.vida)")
             default:
                 print("Escolha uma opção válida!")

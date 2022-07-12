@@ -7,36 +7,14 @@
 
 import Foundation
 
-class Hipogrifo {
-    var nome: String
-    var vida: Int
+class Hipogrifo: Personagem {
+    var nomeAtaque02: String
+    var nomeAtaque03: String
     
-    init(nome: String, vida: Int) {
-        self.nome = nome
-        self.vida = vida
+    init(nome: String, vida: Int, nomeAtaque01: String, nomeAtaque02: String, nomeAtaque03: String){
+        self.nomeAtaque02 = nomeAtaque02
+        self.nomeAtaque03 = nomeAtaque03
+        super.init(nome: nome, vida: vida, nomeAtaque01: nomeAtaque01)
     }
-    
-    func ataqueBicada(atacar: Bool) -> Int {
-        var pontosDeAtaque: Int = 0
-        if atacar == true{
-            pontosDeAtaque = 50
-        }
-        return pontosDeAtaque
-    }
-    
-    func ataqueAsas(atacar: Bool) -> Int {
-        var pontosDeAtaque: Int = 0
-        if atacar == true{
-            pontosDeAtaque = 30
-        }
-        return pontosDeAtaque
-    }
-    
-    func ataquePatas(atacar: Bool) -> Int {
-        var pontosDeAtaque: Int = 0
-        if atacar == true{
-            pontosDeAtaque = 30
-        }
-        return pontosDeAtaque
-    }
+
 }

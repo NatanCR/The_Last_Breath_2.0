@@ -10,7 +10,7 @@ import Foundation
 class BatalhaFinal1 {
     
     public func batalhaFinal1() {
-        let grannus = Grannus(ataqueRevidus: "REVIDUS", nome: "Grannus", vida: 100)
+        let grannus = Personagem(nome: "Grannus", vida: 100, nomeAtaque01: "REVIDUS - (revida os ataques do oponente)")
         
         usaConsole.printaEscrita("""
 
@@ -18,7 +18,7 @@ class BatalhaFinal1 {
 
 """)
         
-        grannus.vida -= 35
+        grannus.vida -= jogador.ataque(dano: 35, atacar: true)
         print("Vida Grannus: \(grannus.vida)")
         
         print("""
@@ -39,7 +39,7 @@ class BatalhaFinal1 {
 
 """)
         
-        jogador.vida -= 30
+        jogador.vida -= grannus.ataque(dano: 30, atacar: true)
         
         usaConsole.printaEscrita("""
 
@@ -64,7 +64,7 @@ Vida \(nomeJogador): \(jogador.vida)
 - Grannus: AAAAHHHH TIRA ISSO DE MIM!! EU NÃO AGUENTO MAIS!!!!!
 
 """)
-        grannus.vida -= 15
+        grannus.vida -= jogador.ataque(dano: 15, atacar: true)
         
         usaConsole.printaEscrita("""
 Vida Grannus: \(grannus.vida)
@@ -102,7 +102,7 @@ Precisamos ajudá-lo, ele está sofrendo!!
             if escolhaErrada == "1" {
                 print("")
             } else if escolhaErrada == "2" {
-                grannus.vida -= 15
+                grannus.vida -= jogador.ataque(dano: 15, atacar: true)
                 usaConsole.printaEscrita("""
 
 Vida Grannus: \(grannus.vida)
@@ -135,7 +135,7 @@ Você fez a escolha errada mas terá sua última chance.
 
 """)
         grannus.vida = 50
-        grannus.vida -= 40
+        grannus.vida -= jogador.ataque(dano: 40, atacar: true)
         
         usaConsole.printaEscrita("""
 Vida Grannus: \(grannus.vida)

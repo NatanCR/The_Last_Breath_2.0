@@ -7,32 +7,12 @@
 
 import Foundation
 
-class MestreMago {
-    var nome: String
-    var vida: Int
-    var ataqueVingarceri: String
-    var ataqueTenebris: String
-    
-    init(ataqueVingarceri: String, ataqueTenebris: String, nome: String, vida: Int) {
-        self.ataqueVingarceri = ataqueVingarceri
-        self.ataqueTenebris = ataqueTenebris
-        self.nome = nome
-        self.vida = vida
+class MestreMago: Personagem {
+    var nomeAtaque02: String
+
+    init(nome: String, vida: Int, nomeAtaque01: String, nomeAtaque02: String) {
+        self.nomeAtaque02 = nomeAtaque02
+        super.init(nome: nome, vida: vida, nomeAtaque01: nomeAtaque01)
     }
     
-    func ataqueVingarceri(atacar: Bool) -> Int {
-        var pontosDeAtaque: Int = 0
-        if atacar == true{
-            pontosDeAtaque = 50
-        }
-        return pontosDeAtaque
-    }
-    
-    func ataqueTenebris(atacar: Bool) -> Int {
-        var pontosDeAtaque: Int = 0
-        if atacar == true{
-            pontosDeAtaque = 50
-        }
-        return pontosDeAtaque
-    }
 }

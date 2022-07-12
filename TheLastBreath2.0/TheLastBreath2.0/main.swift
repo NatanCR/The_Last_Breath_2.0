@@ -10,7 +10,7 @@ import Foundation
 let menu = Menu()
 var pronto: String
 var nomeJogador: String
-var jogador: Personagem
+var jogador: Jogador
 var usaConsole = Console()
 
 repeat {
@@ -20,7 +20,7 @@ repeat {
     if pronto == "1" {
         usaConsole.printaEscrita("Diga-me seu nome...")
         nomeJogador = readLine()!
-        jogador = Personagem(nome: nomeJogador, vida: 100, inventario: FuncoesInventario.init(meuInventario: []))
+        jogador = .init(nome: nomeJogador, vida: 100, inventario: FuncoesInventario.init(meuInventario: []), nomeAtaque01: "Corte com espada!", nomeAtaque02: "Feitiço retardatário!", nomeAtaque03: "Defender com espada!")
         usaConsole.printaEscrita("\nPerfeito, fique sabendo que é um caminho sem volta!")
         menu.menuJogo()
     }else if pronto == "2" {

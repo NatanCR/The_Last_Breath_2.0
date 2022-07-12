@@ -9,7 +9,7 @@ import Foundation
 
 class BatalhaFinal2 {
     public func batalhaFinal2() {
-        let grannus = Grannus(ataqueRevidus: "REVIDUS", nome: "Grannus", vida: 100)
+        let grannus = Personagem(nome: "Grannus", vida: 100, nomeAtaque01: "CRUENTOS PASSOS!!")
         
         usaConsole.printaEscrita("""
 
@@ -17,7 +17,7 @@ class BatalhaFinal2 {
 
 """)
         
-        grannus.vida -= 50
+        grannus.vida -= jogador.ataque(dano: 50, atacar: true)
         print("Vida Grannus: \(grannus.vida)")
         
         usaConsole.printaEscrita("""
@@ -28,11 +28,11 @@ class BatalhaFinal2 {
 
 - Doodou: DROGA!!! \(nomeJogador) em cima de você!!!!
 
-- Grannus: CRUENTOS PASSOS
+- Grannus: \(grannus.nomeAtaque01)
 
 """)
         
-        jogador.vida -= 30
+        jogador.vida -= jogador.ataque(dano: 30, atacar: true)
         
         usaConsole.printaEscrita("""
 
@@ -52,8 +52,11 @@ Vida \(nomeJogador): \(jogador.vida)
         
         let fala1 = usaConsole.repeatWhile(fala: "[1] Golpear Grannus no peito [2] Cortar a cabeça de Grannus", opcao1: "\n- \(nomeJogador): AAAAH EU VOU ACABAR COM VOCÊ!!!!!", opcao2: "\n- \(nomeJogador): AAAAH EU VOU ACABAR COM VOCÊ!!!!!")
         
+        grannus.vida -= jogador.ataque(dano: 50, atacar: true)
         usaConsole.printaEscrita("""
     \(fala1)
+    
+    Vida Grannus: \(grannus.vida)
     
     - Doodou: O QUE VOCÊ FEEEZ???
     
@@ -75,7 +78,7 @@ Vida \(nomeJogador): \(jogador.vida)
     
     - \(nomeJogador): Bryana?? É verdade minha querida irmãzinha!
     
-    - \(nomeJogador): Doodou… HORA DE IR!!! HUAHAUHAUAH
+    - \(nomeJogador): Doodou... HORA DE IR!!! HUAHAUHAUAH
     
     
     Então \(nomeJogador) tomado pelas trevas e sem consciência do que esta fazendo mata seu companheiro Doodou e parte para casa onde está sua irmã Bryana...
