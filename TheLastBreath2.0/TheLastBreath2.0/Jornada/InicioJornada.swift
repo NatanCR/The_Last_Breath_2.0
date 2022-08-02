@@ -22,7 +22,9 @@ No mesmo dia \(nomeJogador) e o duende Doodou partem em uma jornada contra o tem
         } else {
             jogador.inventario.adicionarObjetos()
         }
-        jogador.inventario.mostrarInventario(vetor: jogador.inventario.meuInventario)
+        jogador.inventario.mostrarInventario()
+        
+        
         usaConsole.printaEscrita("""
 
 - Doodou: Certo meu rapaz, você sabe o que encontraremos ao norte até chegarmos no nosso destino, não sabe? Existem animais mágicos que vivem no caminho até a Montanha de Elso.
@@ -164,7 +166,7 @@ Após uma pequena viagem até encontrarem um Hipogrifo \(nomeJogador) e seu duen
         
         usaConsole.printaEscrita("\nVocê irritou o Hipogrifo, prepare-se para lutar!\n")
         
-        jogador.inventario.mostrarInventario(vetor: jogador.inventario.meuInventario)
+        jogador.inventario.mostrarInventario()
         
         usaConsole.printaEscrita("""
 

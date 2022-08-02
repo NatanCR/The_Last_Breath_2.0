@@ -39,6 +39,8 @@ class Console {
                 retorno = opcao1
             } else if escolha == "2" {
                 retorno = opcao2
+            } else {
+                print("Digite uma opção válida.\n")
             }
         } while escolha != "1" && escolha != "2"
         

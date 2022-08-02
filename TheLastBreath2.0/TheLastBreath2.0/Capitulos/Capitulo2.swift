@@ -75,7 +75,8 @@ Ao completar 17 anos, Bryana começa a receber sinais de que seu tempo de vida e
                 } else {
                     jogador.inventario.salvarInventario(tituloObjeto: "Armadura de Prata", descricaoObjeto: "Armadura forjada pelos Reis da Montanha dos Anões", quantidade: 1)
                 }
-                jogador.inventario.mostrarInventario(vetor: jogador.inventario.meuInventario)
+                jogador.inventario.mostrarInventario()
+                
                 inicioJornada.inicioJornada()
             } else if escolhaArmadura == "2" {
                 usaConsole.printaEscrita("- \(nomeJogador): Acho que não vou precisar Solveig, mas agradeço sua preocupação!")

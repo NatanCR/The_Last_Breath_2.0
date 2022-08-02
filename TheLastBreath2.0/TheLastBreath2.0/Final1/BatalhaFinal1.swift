@@ -208,7 +208,7 @@ Vida Grannus: \(grannus.vida)
 
 
 """)
-        jogador.inventario.mostrarInventario(vetor: jogador.inventario.meuInventario)
+       // jogador.inventario.mostrarInventario()
         
         var escolhaMapa: String
         repeat {
