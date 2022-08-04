@@ -14,7 +14,11 @@ class InicioJornada {
 
 No mesmo dia \(nomeJogador) e o duende Doodou partem em uma jornada contra o tempo para que pudessem achar um jeito de salvar Bryana.
 
-- \(nomeJogador): Então Doodou nós vamos para o norte, você lembra do que Solveig disse, não é?
+- \(nomeJogador): Então Doodou nós vamos para o norte, você lembra do que Solveig disse. 
+
+- Doodou: Pegue essas coisas, vai ser muito útil durante nossa jornada.
+
+- \(nomeJogador): Obrigado Doodou!
 
 """)
         if jogador.inventario.verificaItem(nome: "Mapa") != nil {
