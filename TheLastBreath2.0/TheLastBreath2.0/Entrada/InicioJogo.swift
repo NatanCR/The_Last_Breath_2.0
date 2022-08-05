@@ -23,7 +23,9 @@ public class InicioJogo {
             
             switch escolha {
             case "1":
-                sinopse()
+                usaConsole.printaEscrita("\(sinopseTxt)")
+                usaConsole.printaEscrita("\nIniciando jogo...")
+                capitulo1.capitulo1()
             case "2":
                 capitulo1.capitulo1()
             case "3":
@@ -32,19 +34,6 @@ public class InicioJogo {
                 print("\nDigite um opção válido!")
             }
         } while escolha != "3"
-    }
-    
-    private func sinopse() {
-        let capitulo1 = Capitulo1()
-        usaConsole.printaEscrita("""
-
-A história se baseia em uma trama repleta de mistérios e magias, onde você viajará em busca da cura que irá salvar sua irmã de uma maldição lançada por um mago poderoso. Durante esta jornada você irá enfrentar diversos obstáculos e desafios que despertará habilidades ocultas dentro de você.
-
-        Agora você sabe o seu destino!
-
-""")
-        usaConsole.printaEscrita("\nIniciando jogo...")
-        capitulo1.capitulo1()
     }
     init() { }
 }

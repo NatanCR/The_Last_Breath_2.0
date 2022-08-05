@@ -12,8 +12,8 @@ class Console {
         let arr = Array.init(text)
         
         for i in arr {
-            usleep(100004)
-           // usleep(20)
+            //usleep(100004)
+            usleep(20)
             print(i, terminator: "")
         }
         print("")

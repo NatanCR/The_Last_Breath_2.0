@@ -8,15 +8,15 @@
 import Foundation
 
 class Combate02 {
+    
     let hipogrifo = Hipogrifo(nome: "Hipogrifo", vida: 100, nomeAtaque01: "Ataque de bicada!", nomeAtaque02: "Ataque com asas!", nomeAtaque03: "Ataque com patas!")
     
     func combate02() -> Bool {
         var retornoAtaque = false
         jogador.vida = 100
         
-        print("\n\nPersonagem: \(jogador.nome)")
-        print("Ataques: \n[1] Corte com espada\n[2] Feitiço retardatário\n[3] Defender")
-        print("Vida: \(jogador.vida)")
+        infosPersonagemAtaque()
+        
         var escolhaAtaque: String
         
         repeat {
@@ -31,6 +31,7 @@ class Combate02 {
                 retornoAtaque = feiticoDoodou()
                 return retornoAtaque
             case "3":
+                usaConsole.printaEscrita("\nVocê se defendeu do Hipogrifo e isso fez com que ele não tenha raiva de você!")
                 return false
             default:
                 print("Digite uma opção válida.")
@@ -60,9 +61,7 @@ class Combate02 {
         
         var escolheAtaque: String
         repeat {
-            print("\n\nPersonagem: \(jogador.nome)")
-            print("Ataques: \n[1] Corte com espada\n[2] Feitiço retardatário\n[3] Defender")
-            print("Vida: \(jogador.vida)")
+            infosPersonagemAtaque()
             escolheAtaque = readLine()!
             
             switch escolheAtaque {
@@ -102,23 +101,7 @@ Você perdeu todos os seus pontos de vida! Na próxima pense melhor antes de ata
 
 
 """)
-        var escolhaFinal: String
-        
-        repeat {
-            print("\n[1] Mudar escolha\n[2] Ir para menu")
-            escolhaFinal = readLine()!
-            if escolhaFinal == "1" {
-                jogador.vida = 100
-                resultadoBatalha = false
-                return resultadoBatalha
-            } else if escolhaFinal == "2" {
-                resultadoBatalha = true
-                return resultadoBatalha
-            } else {
-                print("Escolha uma opção válida!")
-            }
-        } while escolhaFinal != "1" && escolhaFinal != "2"
-        
+        resultadoBatalha = escolhaDoGameOver()
         return resultadoBatalha
     }
     
@@ -144,9 +127,7 @@ Você perdeu todos os seus pontos de vida! Na próxima pense melhor antes de ata
         
         var escolheAtaque: String
         repeat {
-            print("\n\nPersonagem: \(jogador.nome)")
-            print("Ataques: \n[1] Corte com espada\n[2] Feitiço retardatário\n[3] Defender")
-            print("Vida: \(jogador.vida)")
+            infosPersonagemAtaque()
             escolheAtaque = readLine()!
             
             switch escolheAtaque {
@@ -191,10 +172,21 @@ Você perdeu todos os seus pontos de vida! Na próxima pense melhor antes de ata
 🄶🄰🄼🄴 🄾🅅🄴🅁
 
 
-Você matou o Hipogrifo, meus parabéns mas levou muito tempo para subir a montanha a pé e Bryana morreu sem nenhum tipo de ajuda.
+Você matou o Hipogrifo, meus parabéns! Mas levou muito tempo para subir a montanha a pé e Bryana morreu sem nenhum tipo de ajuda.
 
 
 """)
+        resultadoBatalha = escolhaDoGameOver()
+        return resultadoBatalha
+}
+    private func infosPersonagemAtaque() {
+        print("\n\nPersonagem: \(jogador.nome)")
+        print("Ataques: \n[1] \(jogador.nomeAtaque01)\n[2] \(jogador.nomeAtaque02)\n[3] \(jogador.nomeAtaque03)")
+        print("Vida: \(jogador.vida)")
+    }
+    
+    private func escolhaDoGameOver() -> Bool {
+        var resultadoBatalha = false
         var escolhaFinal: String
         
         repeat {

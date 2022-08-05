@@ -44,10 +44,11 @@ public struct FuncoesInventario {
         
     }
     
-//   public func removeQuantidadeItem(valor: Int, nomeItem: String) {
+//    public func removerItem(nome: String, qtd: Int) {
 //        for i in meuInventario {
-//            if nomeItem == i.tituloObjeto {
-//                i.quantidade -= valor
+//            var indice = i
+//            if indice.tituloObjeto == nome {
+//                meuInventario[indice.quantidade] -= qtd
 //            }
 //        }
 //    }

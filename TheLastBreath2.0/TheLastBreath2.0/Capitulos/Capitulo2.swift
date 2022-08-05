@@ -10,18 +10,8 @@ import Foundation
 class Capitulo2 {
     
     func capitulo2() {
-        usaConsole.printaEscrita("""
-
-
-
-CAPÍTULO II - Uma jornada inesperada.
-
-
-Ao completar 17 anos, Bryana começa a receber sinais de que seu tempo de vida está acabando. Seu meio irmão \(nomeJogador) percebe esses acontecimentos e conta para seu irmão mais velho, Solveig desesperado para salvar sua irmã busca soluções em livros antigos de seu pai para que talvez encontre algo que possa ajudá-los enquanto \(nomeJogador) vai em busca da cura.
-
-
-
-""")
+        usaConsole.printaEscrita("\(entradaCapitulo02Txt)")
+        
         let fala1 = usaConsole.repeatWhile(fala: """
 - Solveig: Meu irmão, nós não temos escolha. Você precisa ir atrás do Grannus e descobrir um jeito de curar Bryana.
 
@@ -29,20 +19,7 @@ Ao completar 17 anos, Bryana começa a receber sinais de que seu tempo de vida e
 
 """, opcao1: "- \(nomeJogador): Eu trarei a cura junto comigo!!", opcao2: "- \(nomeJogador): Bryana precisa aguentar por mais tempo!")
         
-        usaConsole.printaEscrita("""
-\(fala1)
-
-- Solveig: Eu estou buscando alguma fórmula ou feitiço nos livros do nosso pai para tentar retardar o tempo dela para que você tenha mais tempo e consiga achar o Grannus, mas até hoje nada do que eu tentei funcionou...
-
-- \(nomeJogador): Você já sabia que esse dia chegaria, não é mesmo?
-
-- Solveig: Eu cometi erros, meu querido irmão, deveria ter contado sobre essa maldição para vocês, mas não queria que isso mudasse a vida dela e nem a sua!
-
-- \(nomeJogador): Então todos aqueles livros e todos aqueles treinos era pra quando esse dia chegasse...
-
-- Solveig: Sim \(nomeJogador)!! Me perdoe, eu fiz o melhor que pude!
-
-""")
+        usaConsole.printaEscrita("\(fala1) \n\(confissaoSolveigTxt)")
         
         let fala2 = usaConsole.repeatWhile(fala: "- \(nomeJogador): [1] Você deveria ter nos contado!! ou [2] Você sempre cuidou de nós e eu sou grato por isso!!", opcao1: "\n- \(nomeJogador): Você deveria ter nos contado!!", opcao2: "\n- \(nomeJogador): Você sempre cuidou de nós e eu sou grato por isso!!")
         

@@ -53,9 +53,9 @@ public class Menu{
             case "1":
                 inicioJogo.entrada()
             case "2":
-                usaConsole.printaEscrita("\nO jogo é um modelo RPG textual e você terá decisões a tomar durante o decorrer da história, mas preste atenção pois dependendo da sua escolha o jogo pode ter um final diferente do outro. Escolha com sabedoria e bom jogo!")
+                usaConsole.printaEscrita("\(instrucoesJogoTxt)")
             case "3":
-                creditos()
+                usaConsole.printaEscrita("\(creditosTxt)")
             case "4":
                 mostraPersonagens()
             case "5":
@@ -70,21 +70,17 @@ public class Menu{
     private func mostraPersonagens() {
         usaConsole.printaEscrita("\nNão se apegue a eles, podem acabar não sobrevivendo até o final do jogo...")
         
-        let personagensJogo = PersonagensJogo(nome: ["Mestre dos Magos", "Centrion", "Grannus", "Solveig", "Bryana", "Doodou", "Player"], descricao: ["Mago supremo do universo.", "Mago irmão do Mestre dos Magos, que foi corrompido pela fome de poder ao longo dos anos.", "Mago aprendiz do Mestre dos Magos.", "Filho mais velho do Mestre dos Magos e futuro feiticeiro.", "Irmã mais nova de Solveig.", "Duende verde amigo do Mestre dos Magos que o acompanhou durante longos anos de jornada.", "Filho adotivo que foi perdido pelos pais durante uma destruição causada na sua cidade por dois magos."])
+        let infosPersonagensJogo = infosPersonagensJogo(nome: ["Mestre dos Magos", "Centrion", "Grannus", "Solveig", "Bryana", "Doodou", "Player"], descricao: ["Mago supremo do universo.", "Mago irmão do Mestre dos Magos, que foi corrompido pela fome de poder ao longo dos anos.", "Mago aprendiz do Mestre dos Magos.", "Filho mais velho do Mestre dos Magos e futuro feiticeiro.", "Irmã mais nova de Solveig.", "Duende verde amigo do Mestre dos Magos que o acompanhou durante longos anos de jornada.", "Filho adotivo que foi perdido pelos pais durante uma destruição causada na sua cidade por dois magos."])
         
-        for i in 0..<personagensJogo.nome.count {
-            print("\nNome: \(personagensJogo.nome[i])\nDescrição: \(personagensJogo.descricao[i])")
+        for i in 0..<infosPersonagensJogo.nome.count {
+            print("\nNome: \(infosPersonagensJogo.nome[i])\nDescrição: \(infosPersonagensJogo.descricao[i])")
         }
-    }
-    
-    public func creditos() {
-        usaConsole.printaEscrita("\nEste jogo foi desenvolvido e produzido por Natan Camargo Rodrigues.")
     }
     
     init() { }
 }
 
-struct PersonagensJogo {
+struct infosPersonagensJogo {
     var nome: [String]
     var descricao: [String]
 }
