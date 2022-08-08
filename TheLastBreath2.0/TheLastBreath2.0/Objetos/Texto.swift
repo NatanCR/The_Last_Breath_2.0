@@ -201,6 +201,16 @@ No mesmo dia \(nomeJogador) e o duende Doodou partem em uma jornada contra o tem
 
 """
 
+public let levarDoodouTxt = """
+
+- \(nomeJogador): Agora é melhor que eu parta antes do anoitecer, será uma longa jornada!
+
+- Solveig: Esperee!!! Leve o Doodou, ele pode ser muito útil, mas tenha paciência, desde que o nosso pai morreu ele se tornou um ranzinza. Eu vou chama-lo.
+
+- \(nomeJogador): Está bem, vou esperar por ele.
+
+"""
+
 public let avisosDoodouTxt = """
 
 - Doodou: Certo meu rapaz, você sabe o que encontraremos ao norte até chegarmos no nosso destino, não sabe? Existem animais mágicos que vivem no caminho até a Montanha de Elso.

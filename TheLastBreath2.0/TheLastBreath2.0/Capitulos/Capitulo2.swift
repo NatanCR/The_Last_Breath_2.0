@@ -23,16 +23,8 @@ class Capitulo2 {
         
         let fala2 = usaConsole.repeatWhile(fala: "- \(nomeJogador): [1] Você deveria ter nos contado!! ou [2] Você sempre cuidou de nós e eu sou grato por isso!!", opcao1: "\n- \(nomeJogador): Você deveria ter nos contado!!", opcao2: "\n- \(nomeJogador): Você sempre cuidou de nós e eu sou grato por isso!!")
         
-        usaConsole.printaEscrita("""
-\(fala2)
-
-- \(nomeJogador): Agora é melhor que eu parta antes do anoitecer, será uma longa jornada!
-
-- Solveig: Esperee!!! Leve o Doodou, ele pode ser muito útil, mas tenha paciência, desde que o nosso pai morreu ele se tornou um ranzinza. Eu vou chama-lo.
-
-- \(nomeJogador): Está bem, vou esperar por ele.
-
-""")
+        usaConsole.printaEscrita("\n\(fala2)\n\(levarDoodouTxt) ")
+        
         var escolhaArmadura: String
         
         repeat {
