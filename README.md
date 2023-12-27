@@ -1,6 +1,6 @@
 # The_Last_Breath_2.0
-Jogo de RPG textual desenvolvido em linguagem Swift.
+A text-based role-playing game developed in Swift.
 
-Reescrevi a história do jogo criado em linguagem Java no meu primeiro semestre da faculdade para um projeto em linguagem Swift da Apple Developer Academy. A base da história continua sendo a mesma, porém dessa vez com mais opções de caminhos e finais diferentes de acordo com a escolha de cada ação durante o jogo feita pelo jogador. 
+I rewrote the story of the game created in Java in my first semester at university for a Swift language project at the Apple Developer Academy. The basis of the story remains the same, but this time with more path options and different endings according to the player's choice of action during the game. 
 
-Sinopse: A história se baseia em uma trama repleta de mistérios e magias, onde você viajará em busca da cura que irá salvar sua irmã de uma maldição lançada por um mago poderoso. Durante esta jornada você irá enfrentar diversos obstáculos e desafios que despertará habilidades ocultas dentro de você.
+Synopsis: The story is based on a plot full of mystery and magic, where you will travel in search of the cure that will save your sister from a curse cast by a powerful wizard. During this journey you will face various obstacles and challenges that will awaken hidden abilities within you.
